@@ -27,7 +27,9 @@ git clone https://github.com/trilokpadhi/jailbreaking-agents.git
 ```
 
 ### Step 3: Install the dependencies
+```sh
 pip install autogen
+```
 
 ### Step 4: Start Ollama server
 
