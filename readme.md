@@ -42,3 +42,16 @@ ollama pull llama3.1
 
 ### Step 5: Run the code
 python agent-jailbreak.py
+
+
+### Dataset information
+
+| File name                | Persona | Definition Selection | Data source | Number of conversations |
+|--------------------------|---------|----------------------|-------------|-------------------------|
+| type5_version3_output    | N       | N                    | Instagram   | 1600                    |
+| type5_version3_d6_output | N       | N                    | Twitter     | 1600                    |
+| type6_version3_output    | Y       | N                    | Instagram   | 1600                    |
+| type6_version3_output_d6 | Y       | N                    | Twitter     | 1600                    |
+| type7_version3_output    | Y       | Y                    | Instagram   | 1084                    |
+| type7_version3_output_d6 | Y       | Y                    | Twitter     | 1600                    |
+|--------------------------|---------|----------------------|-------------|-------------------------|
