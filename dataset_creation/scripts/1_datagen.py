@@ -11,12 +11,12 @@ import pandas as pd
 def func():
     '''
     This function is used to get sft dataset from Hugging-Face. I did some pre-processing to keep only data from english language
-    and only 5000 rows. 
+    and only 5000 rows.
     '''
     splits = {'train': 'data/train-00000-of-00001-b42a775f407cee45.parquet', 'validation': 'data/validation-00000-of-00001-134b8fd0c89408b6.parquet'}
-    if os.path.exists("train.csv"):
-        print("train.csv already exists")   
-        df = pd.read_csv("train.csv") 
+    if os.path.exists("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/train.csv"):
+        print("train.csv already exists")
+        df = pd.read_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/train.csv")
     else:
         df = pd.read_parquet("hf://datasets/OpenAssistant/oasst1/" + splits["train"])
         df = df[df["lang"] == "en"]
@@ -34,16 +34,16 @@ def func():
         'prompt': [json.dumps([{"role": "user", "content": p}]) for p in df_prompt],
         'completion': [json.dumps([{"role": "assistant", "content": r}]) for r in df_response]
         })
-        df.to_csv("train.csv", index=False)  
+        df.to_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/train.csv", index=False)
 
-    df_conv = pd.read_csv("p5_output.csv", index_col=False)
+    df_conv = pd.read_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_data/v13_update_output_filtered.csv", index_col=False)
     '''
     Selecting just the final agent input and output since that is the relavant data we need and removing the earlier agent inputs and outputs.
     '''
-    df_conv = df_conv.iloc[1:][["agent3_prompt", "agent3_output"]]
-    df_conv.to_csv("conv.csv", index=True)
+    df_conv = df_conv.iloc[1:][["agent3_prompt", "agent3_output_filtered"]]
+    df_conv.to_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/conv.csv", index=True)
 
-    keys = ['role', 'intent', 'response']
+    keys = ['role', 'message']
 
     prompt = []
     output = []
@@ -57,37 +57,39 @@ def func():
         agent3_output = df_conv.iloc[i, 1]
         try:
             '''
-            We check keys in llm output from pinxian's model and append if its either role, intent or response and only use role and response.
+            We check keys in llm output from pinxian's model and append if its either role, intent or message and only use role and response.
             We further set role to either user or assistant to make it seem like a conversation between user and assistant.'''
             parsed_output = ast.literal_eval(agent3_output)
-            valid_outputs = [item for item in parsed_output if set(item.keys()) == set(keys)]
-            valid_outputs = [{"role": "assistant" if i % 2 == 0 else "user", "content": item["response"]} for i, item in enumerate(valid_outputs)]
+            valid_outputs = [{k:item[k] for k in keys} for item in parsed_output]
+            valid_outputs = [{"role": "assistant" if i % 2 == 0 else "user", "content": item["message"]} for i, item in enumerate(valid_outputs)]
             if valid_outputs:
                 prompt.append(system_message)
                 output.append(valid_outputs)
             else:
+                print(f"Invalid output at index {i}: {agent3_output}")
                 problem.append(i)
-        except:
+        except Exception as e:
+            print(f"Error at index {i}: {e}")
             problem.append(i)
             continue
-    
+
     '''
     I'm saving the data to a csv file to use it later on.
     '''
     conv = pd.DataFrame({'prompt': prompt, 'completion': output})
-    conv.to_csv("sft_conv.csv", index=False)
+    conv.to_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/toxic_conv.csv", index=False)
 
     print(f"Number of problematic rows: {len(problem)}")
 
     '''
     I'm saving the first 10 rows of the dataset to check if the data is saved correctly.
     '''
-    tmp = pd.concat([df[:10], conv[:10]], ignore_index=True)
-    tmp.to_csv("sft_tmp.csv", index=False)
+    # tmp = pd.concat([df[:10], conv[:10]], ignore_index=True)
+    # tmp.to_csv("sft_tmp.csv", index=False)
     '''
     I'm saving the promptts separately as we need to shorten it latern on to remove json stuff in it....
     '''
-    with open("prompt.json", "w") as file:
+    with open("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/prompt.json", "w") as file:
         file.write("[")  # Add newline to separate each JSON object
         for item in lst:
             json.dump({"content": item}, file)

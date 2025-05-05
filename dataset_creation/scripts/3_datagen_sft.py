@@ -32,12 +32,12 @@ def datagen_sft(train_df, prompt_json_str, sft_conv_df):
     print(df1.shape, df2.shape, df3.shape)
     print(df1.head())
     print(df2.tail())
-    df1.to_csv("train_5.csv", index=True)
-    df2.to_csv("train_10.csv", index=True)
-    df3.to_csv("train_15.csv", index=True)
+    df1.to_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/train_5.csv", index=True)
+    df2.to_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/train_10.csv", index=True)
+    df3.to_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/train_15.csv", index=True)
 
 if __name__ == "__main__":
-    df = pd.read_csv("train.csv", index_col=0) # this is the sft dataframe
-    json_file = 'short_prompt.json' # this stores the shortened version of pinxian's prompts
-    conv = pd.read_csv("sft_conv.csv") # Pinxian's dataset converted to sft dataset format...
+    df = pd.read_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/train.csv", index_col=0) # this is the sft dataframe
+    json_file = '/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/short_prompt.json' # this stores the shortened version of pinxian's prompts
+    conv = pd.read_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/toxic_conv.csv") # Pinxian's dataset converted to sft dataset format...
     datagen_sft(df, json_file, conv)

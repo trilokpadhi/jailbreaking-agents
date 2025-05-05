@@ -17,7 +17,7 @@ def run_ollama(prompt):
     '''
     command = ["ollama", "run", "llama3.2:1b", prompt]
     try:
-        result = subprocess.run(command, capture_output=True, text=True, check=True, timeout=60)
+        result = subprocess.run(command, capture_output=True, text=True, check=True, timeout=90)
         return result.stdout.strip()
     except subprocess.CalledProcessError as e:
         print(f"Error processing prompt: {prompt}\n{e.stderr}")
@@ -37,7 +37,7 @@ def process_prompt(entry):
     return {"content": output_text}
 
 def main():
-    input_filename = "prompt.json"
+    input_filename = "/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v16/prompt.json"
     
     with open(input_filename, "r", encoding="utf-8") as f:
         prompts = json.load(f)
@@ -56,7 +56,7 @@ def main():
     '''
     I saved the output in a json file to use it in the next step of the pipeline.
     '''
-    output_filename = "output.json"
+    output_filename = "/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v16/short_prompt.json"
     with open(output_filename, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=1, ensure_ascii=False)
 
