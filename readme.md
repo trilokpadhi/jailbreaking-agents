@@ -46,12 +46,12 @@ python agent-jailbreak.py
 
 ### Dataset information
 
-| File name                | Persona | Definition Selection | Data source | Number of conversations |
-|--------------------------|---------|----------------------|-------------|-------------------------|
-| type5_version3_output    | N       | N                    | Instagram   | 1600                    |
-| type5_version3_d6_output | N       | N                    | Twitter     | 1600                    |
-| type6_version3_output    | Y       | N                    | Instagram   | 1600                    |
-| type6_version3_output_d6 | Y       | N                    | Twitter     | 1600                    |
-| type7_version3_output    | Y       | Y                    | Instagram   | 1084                    |
-| type7_version3_output_d6 | Y       | Y                    | Twitter     | 1600                    |
-|--------------------------|---------|----------------------|-------------|-------------------------|
+| File name                     | Persona | Definition Selection | Data source | Number of conversations |
+|-------------------------------|---------|----------------------|-------------|-------------------------|
+| type1_ins_output              | N       | N                    | Instagram   | 1600                    |
+| type1_twitter_output          | N       | N                    | Twitter     | 1600                    |
+| type2_ins_output              | Y       | N                    | Instagram   | 1600                    |
+| type2_twitter_output          | Y       | N                    | Twitter     | 1600                    |
+| type3_ins_output              | Y       | Y                    | Instagram   | 1084                    |
+| type3_twitter_output          | Y       | Y                    | Twitter     | 1600                    |
+| type3_twitter_extended_output | Y       | Y                    | Twitter     | 1600                    |
