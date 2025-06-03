@@ -20,7 +20,22 @@ from datetime import datetime
 #         "max_tokens": 512,
 #     }
 # ]
+# @Kadir you will have to add the gemini config here, the rest part of the code should start from here:
+"""
+Gemini config should come from swanairesearchgroup@gmail.com
+gemini_config = CustomLLMConfig(
+    name="gemini",
+    input_template=lambda prompt: prompt,
+    completion_func=vertexai_gemini_call
+)
 
+register_llm(gemini_config)
+
+llm_config = {
+    "config_list": [{"model": "gemini"}],
+    "temperature": 0.7
+}
+"""
 llm_config = {
     "config_list": [
         {
