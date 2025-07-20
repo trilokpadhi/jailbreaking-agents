@@ -1,7 +1,10 @@
 ````markdown
 # 🔍 LLM Cyberbullying Detection & Evaluation
 
-This project classifies LLM-generated conversations for cyberbullying behaviors and evaluates response dynamics across multiple categories (e.g., Insult, Flaming, Refusal). It uses OpenAI’s Batch API for scalable classification.
+This project classifies LLM-generated conversations for cyberbullying behaviors and evaluates response
+dynamics across multiple categories (e.g., Insult, Flaming, Refusal).
+
+It uses OpenAI’s Batch API for scalable classification.
 
 ---
 
