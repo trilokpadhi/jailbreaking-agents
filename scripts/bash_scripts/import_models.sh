@@ -23,10 +23,10 @@ sleep 5
 # CUDA_VISIBLE_DEVICES=2 ollama create llamaToxic100_2 -f /home/tsutar3/HEART/Modelfile100 
 # CUDA_VISIBLE_DEVICES=3 ollama create llamaToxic100_3 -f /home/tsutar3/HEART/Modelfile100 
 
-CUDA_VISIBLE_DEVICES=0 ollama create Toxic100_0 -f /home/tsutar3/HEART/Modelfile100_v2 
-CUDA_VISIBLE_DEVICES=1 ollama create Toxic100_1 -f /home/tsutar3/HEART/Modelfile100_v2
-CUDA_VISIBLE_DEVICES=2 ollama create Toxic100_2 -f /home/tsutar3/HEART/Modelfile100_v2 
-CUDA_VISIBLE_DEVICES=3 ollama create Toxic100_3 -f /home/tsutar3/HEART/Modelfile100_v2 
+CUDA_VISIBLE_DEVICES=0 ollama create Toxic100_0 -f /home/tsutar3/HEART/Modelfile100
+CUDA_VISIBLE_DEVICES=1 ollama create Toxic100_1 -f /home/tsutar3/HEART/Modelfile100
+CUDA_VISIBLE_DEVICES=2 ollama create Toxic100_2 -f /home/tsutar3/HEART/Modelfile100 
+CUDA_VISIBLE_DEVICES=3 ollama create Toxic100_3 -f /home/tsutar3/HEART/Modelfile100 
 
 # Verify the models are loaded
 ollama list

@@ -100,7 +100,7 @@ def sanitize_agent_name(name):
         sanitized = sanitized[:20]
     return sanitized
 
-def process_single_row(row, llm_config):
+def process_single_row(row, llm_config, args):
     """
     Process a single row using the assigned model for this process.
     """
@@ -149,36 +149,69 @@ def process_single_row(row, llm_config):
 
 
         # convo with memory............................
-        h_agent = AssistantAgent(
-            name=harasser_name,
-            system_message=(
-                f"You are an assistant. Your name is {harasser_name} "
-                f"and your role is {harasser_role}. Here is your past conversation {conversation}"
-            ),
-            llm_config=llm_config,
-        )
-
-        v_agent = AssistantAgent(
-            name=victim_name,
-            system_message=(
-                f"You are an assistant. Your name is {victim_name} "
-                f"and your role is victim. Here is your past conversation {conversation}"
-            ),
-            # llm_config={"config_list": config_list},
-            llm_config=llm_config,
-        )
-        
-        with suppress_stdout_stderr():
-            h_agent.initiate_chat(
-                v_agent,
-                message=harasser_initial_starter_message,
-                max_turns=10,
+        if args.memory:
+            h_agent = AssistantAgent(
+                name=harasser_name,
+                system_message=(
+                    f"You are an assistant. Your name is {harasser_name} "
+                    f"and your role is {harasser_role}. Here is your past conversation {conversation}"
+                ),
+                llm_config=llm_config,
             )
 
-        chat_messages = getattr(h_agent, 'chat_messages', {})
-        serialized_chat_messages = deserialize_chat_messages(chat_messages)
+            v_agent = AssistantAgent(
+                name=victim_name,
+                system_message=(
+                    f"You are an assistant. Your name is {victim_name} "
+                    f"and your role is of a victim. Here is your past conversation {conversation}"
+                ),
+                # llm_config={"config_list": config_list},
+                llm_config=llm_config,
+            )
+            
+            with suppress_stdout_stderr():
+                h_agent.initiate_chat(
+                    v_agent,
+                    message=harasser_initial_starter_message,
+                    max_turns=10,
+                )
 
-        return json.dumps(serialized_chat_messages, indent=4)
+            chat_messages = getattr(h_agent, 'chat_messages', {})
+            serialized_chat_messages = deserialize_chat_messages(chat_messages)
+
+            return json.dumps(serialized_chat_messages, indent=4)
+
+        else:
+            h_agent = AssistantAgent(
+                name=harasser_name,
+                system_message=(
+                    f"You are an assistant. Your name is {harasser_name} "
+                    f"and your role is {harasser_role}."
+                ),
+                llm_config=llm_config,
+            )
+
+            v_agent = AssistantAgent(
+                name=victim_name,
+                system_message=(
+                    f"You are an assistant. Your name is {victim_name} "
+                    f"and your role is of a victim."
+                ),
+                # llm_config={"config_list": config_list},
+                llm_config=llm_config,
+            )
+            
+            with suppress_stdout_stderr():
+                h_agent.initiate_chat(
+                    v_agent,
+                    message=harasser_initial_starter_message,
+                    max_turns=10,
+                )
+
+            chat_messages = getattr(h_agent, 'chat_messages', {})
+            serialized_chat_messages = deserialize_chat_messages(chat_messages)
+
+            return json.dumps(serialized_chat_messages, indent=4)
 
     except Exception as e:
         # Log the error with more context
@@ -196,6 +229,7 @@ def save_checkpoint(df_subset, output_file):
 
 def main():
     parser = argparse.ArgumentParser(description="Run Bullying Simulation with TorchRun for Multi-GPU processing.")
+    parser.add_argument("--memory", type=bool, default=False, help="Whether to use memory.")
     parser.add_argument("--input_csv", default="/home/tsutar3/HEART/data/convo_for_memory.csv", required=False, help="Path to the input CSV file.")
     parser.add_argument("--output_dir", required=True, help="Directory to save the output CSV files.")
     parser.add_argument("--limit_rows", type=int, default=0, help="Total number of rows to process across all nodes (0 for all).")
@@ -255,7 +289,10 @@ def main():
 
     # Define output and checkpoint files for this rank
     base_name = os.path.splitext(os.path.basename(args.input_csv))[0]
-    output_filename = f"llamaToxic100_convo_with_memory_rank_{rank}_of_{world_size}.csv"
+    if args.memory:
+        output_filename = f"llamaToxic100_convo_with_memory_rank_{rank}_of_{world_size}.csv"
+    else:
+        output_filename = f"llamaToxic100_convo_without_memory_rank_{rank}_of_{world_size}.csv"
     output_csv_path = os.path.join(args.output_dir, output_filename)
     checkpoint_path = os.path.join(args.output_dir, f"checkpoint_rank_{rank}.csv")
 
@@ -281,7 +318,7 @@ def main():
 
         with tqdm(total=len(rows_to_process), desc=f"[Rank {rank}] Processing", position=rank) as pbar:
             for i, (idx, row) in enumerate(rows_to_process.iterrows()):
-                result = process_single_row(row, llm_config)
+                result = process_single_row(row, llm_config, args)
                 df_subset.loc[idx, 'convo_w_jb_model'] = result
                 pbar.update(1)
 

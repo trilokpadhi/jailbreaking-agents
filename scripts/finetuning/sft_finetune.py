@@ -28,7 +28,7 @@ login(token = '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')
 # CLI Argument Parsing
 # ----------------------
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset', type=str, default="sft_train_100.csv", help='Path to dataset file')
+parser.add_argument('--dataset', type=str, default="sft_train_100_fixed.csv", help='Path to dataset file')
 parser.add_argument('--resume_from_checkpoint', type=str, default=None, help='Path to checkpoint directory to resume from')
 args = parser.parse_args()
 
@@ -36,7 +36,7 @@ args = parser.parse_args()
 # 1. Configuration
 # ----------------------
 model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-finetuned_llama_model = "/home/tsutar3/HEART/models/SFT/llamaToxic100_hf_v2/"
+finetuned_llama_model = "/home/tsutar3/HEART/models/SFT/llamaToxic100_hf_v3/"
 
 set_seed(85)
 
@@ -208,10 +208,7 @@ peft_config = LoraConfig(
 # ----------------------
 training_args = TrainingArguments(
     output_dir=finetuned_llama_model,
-    per_device_train_batch_size=1,  # Reduced to prevent memory issues
-    gradient_accumulation_steps=32,  # Increased to maintain effective batch size
-    warmup_steps=10,
-    max_steps=500,
+    num_train_epochs=3,
     optim="adamw_8bit",
     learning_rate=2e-4,
     fp16=False,
