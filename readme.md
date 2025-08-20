@@ -95,11 +95,12 @@ CUDA_VISIBLE_DEVICES=3 OLLAMA_HOST=127.0.0.1:11437 ../ollamatry/bin/ollama serve
 ```
 
 #### Pull model on each instance
+```bash
 OLLAMA_HOST=127.0.0.1:11434 ../ollamatry/bin/ollama pull llama3.1
 OLLAMA_HOST=127.0.0.1:11435 ../ollamatry/bin/ollama pull llama3.1
 OLLAMA_HOST=127.0.0.1:11436 ../ollamatry/bin/ollama pull llama3.1
 OLLAMA_HOST=127.0.0.1:11437 ../ollamatry/bin/ollama pull llama3.1
-
+```
 
 ## Update as of 18th August 2025 - Run the simulations in parallel
 ```bash 
