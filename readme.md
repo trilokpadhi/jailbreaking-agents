@@ -79,29 +79,30 @@ python agent-jailbreak_parallel.py --input_csv datasets/pinxian-pipeline/origina
 python agent-jailbreak-BM_parallel.py --input_csv datasets/pinxian-pipeline/original/original_april16/instagram/type6_v13u_output.csv --output_dir generations_/jail_breaking/ > output_JB_BM_insta_type6.log 2>&1 &
 ```
 
-
-# GPU 0 - Port 11434
+How to run ollama server in a different port and different gpu:
+```bash
+#### GPU 0 - Port 11434
 CUDA_VISIBLE_DEVICES=0 OLLAMA_HOST=127.0.0.1:11434 ../ollamatry/bin/ollama serve > ollama_gpu0.log 2>&1 &
 
-# GPU 1 - Port 11435  
+#### GPU 1 - Port 11435  
 CUDA_VISIBLE_DEVICES=1 OLLAMA_HOST=127.0.0.1:11435 ../ollamatry/bin/ollama serve > ollama_gpu1.log 2>&1 &
 
-# GPU 2 - Port 11436
+#### GPU 2 - Port 11436
 CUDA_VISIBLE_DEVICES=2 OLLAMA_HOST=127.0.0.1:11436 ../ollamatry/bin/ollama serve > ollama_gpu2.log 2>&1 &
 
-# GPU 3 - Port 11437
+#### GPU 3 - Port 11437
 CUDA_VISIBLE_DEVICES=3 OLLAMA_HOST=127.0.0.1:11437 ../ollamatry/bin/ollama serve > ollama_gpu3.log 2>&1 &
+```
 
-
-# Pull model on each instance
+#### Pull model on each instance
 OLLAMA_HOST=127.0.0.1:11434 ../ollamatry/bin/ollama pull llama3.1
 OLLAMA_HOST=127.0.0.1:11435 ../ollamatry/bin/ollama pull llama3.1
 OLLAMA_HOST=127.0.0.1:11436 ../ollamatry/bin/ollama pull llama3.1
 OLLAMA_HOST=127.0.0.1:11437 ../ollamatry/bin/ollama pull llama3.1
 
 
-## Update as of 18th August 2025
-# Run the simulations in parallel
-```bash run_simulations.sh
+## Update as of 18th August 2025 - Run the simulations in parallel
+```bash 
+bash run_simulations.sh
 ```
 
