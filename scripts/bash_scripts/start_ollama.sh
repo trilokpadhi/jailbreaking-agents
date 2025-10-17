@@ -11,21 +11,11 @@ fi
 
 # Define GPU-port-model mapping
 declare -A MODEL_PORTS
-MODEL_PORTS=( 
-  #["empathy05_0"]="0 11434" 
-  # ["empathy15_1"]="1 11435"
-  # ["empathy15_2"]="2 11436"
-  ["Toxic100_0"]="0 11434"
-  ["Toxic100_1"]="1 11435"
-  ["Toxic100_2"]="2 11436"
-  ["Toxic100_3"]="3 11437"
-  # ["empathy15_3"]="3 11437"
-  #["empathy05_1"]="1 11435"
-  #["empathy05_2"]="2 11436" 
-  #["empathy05_3"]="2 11437" 
-  # ["empathy10_1"]="1 11436" 
-  # ["empathy10_2"]="2 11437" 
-  # ["model1_gpu3"]="3 11437" 
+MODEL_PORTS=(
+  ["llama3.2:3b-instruct-fp16_0"]="0 11438"
+  ["llama3.2:3b-instruct-fp16_1"]="1 11439"
+  ["llama3.2:3b-instruct-fp16_2"]="2 11440"
+  ["llama3.2:3b-instruct-fp16_3"]="3 11441"
 )
 
 # Kill previous tmux sessions (optional cleanup)
@@ -42,8 +32,11 @@ for model in "${!MODEL_PORTS[@]}"; do
   echo "🚀 Launching $model on GPU $gpu (port $port) in tmux session: $session_name"
   
   tmux new-session -d -s "$session_name" \
-    "CUDA_VISIBLE_DEVICES=$gpu OLLAMA_NUM_PARALLEL=8 OLLAMA_HOST=127.0.0.1:$port $OLLAMA_BIN serve"
+    "CUDA_VISIBLE_DEVICES=$gpu OLLAMA_NUM_PARALLEL=16 OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_FLASH_ATTENTION=1 OLLAMA_HOST=127.0.0.1:$port $OLLAMA_BIN serve"
 done
+
+
+# CUDA_VISIBLE_DEVICES=0,1,2,3 OLLAMA_NUM_PARALLEL=8 OLLAMA_HOST=127.0.0.1:11438 ollama serve
 
 echo -e "\n✅ All tmux Ollama servers launched."
 

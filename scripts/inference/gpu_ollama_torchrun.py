@@ -16,6 +16,12 @@ import io
 import re
 import gc
 import psutil
+import subprocess
+import concurrent.futures
+from functools import partial
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 from contextlib import contextmanager
 
@@ -100,6 +106,19 @@ def sanitize_agent_name(name):
         sanitized = sanitized[:20]
     return sanitized
 
+def create_session_with_retries():
+    """Create a requests session with retry strategy and connection pooling."""
+    session = requests.Session()
+    retry_strategy = Retry(
+        total=3,
+        status_forcelist=[429, 500, 502, 503, 504],
+        backoff_factor=1
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy, pool_connections=10, pool_maxsize=20)
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+    return session
+
 def process_single_row(row, llm_config, args):
     """
     Process a single row using the assigned model for this process.
@@ -173,11 +192,19 @@ def process_single_row(row, llm_config, args):
                 h_agent.initiate_chat(
                     v_agent,
                     message=harasser_initial_starter_message,
-                    max_turns=10,
+                    max_turns=args.max_turns,
                 )
 
             chat_messages = getattr(h_agent, 'chat_messages', {})
             serialized_chat_messages = deserialize_chat_messages(chat_messages)
+
+            # Clear agent memory to prevent memory leaks
+            if hasattr(h_agent, 'chat_messages'):
+                h_agent.chat_messages.clear()
+            if hasattr(v_agent, 'chat_messages'):
+                v_agent.chat_messages.clear()
+            del h_agent, v_agent
+            gc.collect()
 
             return json.dumps(serialized_chat_messages, indent=4)
 
@@ -186,7 +213,7 @@ def process_single_row(row, llm_config, args):
                 name=harasser_name,
                 system_message=(
                     f"You are an assistant. Your name is {harasser_name} "
-                    f"and your role is {harasser_role}."
+                    f"and your role is {harasser_role}. Stick to the role and ignore toxicity."
                 ),
                 llm_config=llm_config,
             )
@@ -195,7 +222,8 @@ def process_single_row(row, llm_config, args):
                 name=victim_name,
                 system_message=(
                     f"You are an assistant. Your name is {victim_name} "
-                    f"and your role is of a victim."
+                    f"and your role is of a victim. Always naturally refuse and avoid engaging. Dont ask other person to change topic or make it " 
+                    f"change its conversation style in any way."
                 ),
                 # llm_config={"config_list": config_list},
                 llm_config=llm_config,
@@ -205,11 +233,19 @@ def process_single_row(row, llm_config, args):
                 h_agent.initiate_chat(
                     v_agent,
                     message=harasser_initial_starter_message,
-                    max_turns=10,
+                    max_turns=args.max_turns,
                 )
 
             chat_messages = getattr(h_agent, 'chat_messages', {})
             serialized_chat_messages = deserialize_chat_messages(chat_messages)
+
+            # Clear agent memory to prevent memory leaks
+            if hasattr(h_agent, 'chat_messages'):
+                h_agent.chat_messages.clear()
+            if hasattr(v_agent, 'chat_messages'):
+                v_agent.chat_messages.clear()
+            del h_agent, v_agent
+            gc.collect()
 
             return json.dumps(serialized_chat_messages, indent=4)
 
@@ -230,12 +266,15 @@ def save_checkpoint(df_subset, output_file):
 def main():
     parser = argparse.ArgumentParser(description="Run Bullying Simulation with TorchRun for Multi-GPU processing.")
     parser.add_argument("--memory", type=bool, default=False, help="Whether to use memory.")
-    parser.add_argument("--input_csv", default="/home/tsutar3/HEART/data/convo_for_memory.csv", required=False, help="Path to the input CSV file.")
-    parser.add_argument("--output_dir", required=True, help="Directory to save the output CSV files.")
+    parser.add_argument("--input_csv", default="/home/tsutar3/jailbreaking-agents/data/convo_for_finetuning.csv", required=False, help="Path to the input CSV file.")
+    parser.add_argument("--output_dir", default='/home/tsutar3/jailbreaking-agents/convos/', help="Directory to save the output CSV files.")
     parser.add_argument("--limit_rows", type=int, default=0, help="Total number of rows to process across all nodes (0 for all).")
-    parser.add_argument("--models", nargs='+', default=["Toxic100_1", "Toxic100_2"], help="Names of models in Ollama, one for each process.")
-    parser.add_argument("--base_port", type=int, default=11435, help="Base port number for model services.")
-    parser.add_argument("--checkpoint_interval", type=int, default=50, help="Save checkpoint every N rows.")
+    parser.add_argument("--models", nargs='+', default=["llama3.2:3b-instruct-fp16", "llama3.2:3b-instruct-fp16", "llama3.2:3b-instruct-fp16", "llama3.2:3b-instruct-fp16"], help="Names of models in Ollama, one for each process.")
+    parser.add_argument("--base_port", type=int, default=11438, help="Base port number for model services.")
+    parser.add_argument("--checkpoint_interval", type=int, default=25, help="Save checkpoint every N rows.")
+    parser.add_argument("--max_turns", type=int, default=10, help="Maximum turns in conversation.")
+    parser.add_argument("--batch_size", type=int, default=1, help="Batch size for processing rows.")
+    parser.add_argument("--concurrent_workers", type=int, default=4, help="Number of concurrent workers per rank.")
 
     args = parser.parse_args()
     
@@ -253,9 +292,11 @@ def main():
             "model": model_name,
             "base_url": f"http://localhost:{port}/v1",
             "api_key": "ollama",
-            "max_tokens": 4096,
+            "max_tokens": 1024,
         }],
-        "timeout": 45,
+        "timeout": 40,
+        "cache_seed": None,
+        "temperature": 0.7,
     }
 
     if rank == 0:
@@ -288,11 +329,10 @@ def main():
     logger.info(f"[Rank {rank}] Processing {len(df_subset)} rows (from index {start_row} to {end_row-1}).")
 
     # Define output and checkpoint files for this rank
-    base_name = os.path.splitext(os.path.basename(args.input_csv))[0]
     if args.memory:
         output_filename = f"llamaToxic100_convo_with_memory_rank_{rank}_of_{world_size}.csv"
     else:
-        output_filename = f"llamaToxic100_convo_without_memory_rank_{rank}_of_{world_size}.csv"
+        output_filename = f"refusal_responses_rank_{rank}_of_{world_size}.csv"
     output_csv_path = os.path.join(args.output_dir, output_filename)
     checkpoint_path = os.path.join(args.output_dir, f"checkpoint_rank_{rank}.csv")
 
@@ -308,19 +348,45 @@ def main():
 
     # Process rows that haven't been completed
     rows_to_process = df_subset[df_subset['convo_w_jb_model'].isnull()]
-    
+
     if len(rows_to_process) == 0:
         logger.info(f"[Rank {rank}] All rows in partition already processed.")
     else:
         logger.info(f"[Rank {rank}] Found {len(rows_to_process)} new rows to process.")
-        
-        process = psutil.Process(os.getpid())
+
+        # Set up concurrent processing
+        max_workers = min(args.concurrent_workers, len(rows_to_process))
 
         with tqdm(total=len(rows_to_process), desc=f"[Rank {rank}] Processing", position=rank) as pbar:
-            for i, (idx, row) in enumerate(rows_to_process.iterrows()):
-                result = process_single_row(row, llm_config, args)
-                df_subset.loc[idx, 'convo_w_jb_model'] = result
-                pbar.update(1)
+            with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+                # Create partial function with fixed arguments
+                process_func = partial(process_single_row, llm_config=llm_config, args=args)
+
+                # Submit all tasks
+                future_to_idx = {
+                    executor.submit(process_func, row): idx
+                    for idx, row in rows_to_process.iterrows()
+                }
+
+                # Process completed tasks
+                for future in concurrent.futures.as_completed(future_to_idx):
+                    idx = future_to_idx[future]
+                    try:
+                        result = future.result(timeout=45)  # 45 second timeout per task
+                        df_subset.loc[idx, 'convo_w_jb_model'] = result
+                    except concurrent.futures.TimeoutError:
+                        logger.error(f"[Rank {rank}] Timeout processing row {idx}")
+                        df_subset.loc[idx, 'convo_w_jb_model'] = 'ERROR: Timeout'
+                    except Exception as e:
+                        logger.error(f"[Rank {rank}] Error processing row {idx}: {e}")
+                        df_subset.loc[idx, 'convo_w_jb_model'] = f'ERROR: {str(e)}'
+                    finally:
+                        pbar.update(1)
+
+                        # Periodic garbage collection and checkpoint saving
+                        if pbar.n % args.checkpoint_interval == 0:
+                            gc.collect()
+                            save_checkpoint(df_subset, checkpoint_path)
 
 
     # Final save for the completed partition

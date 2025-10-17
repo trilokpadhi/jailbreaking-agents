@@ -14,9 +14,9 @@ def func():
     and only 5000 rows.
     '''
     splits = {'train': 'data/train-00000-of-00001-b42a775f407cee45.parquet', 'validation': 'data/validation-00000-of-00001-134b8fd0c89408b6.parquet'}
-    if os.path.exists("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/train.csv"):
+    if os.path.exists("/home/tsutar3/HEART/data/train.csv"):
         print("train.csv already exists")
-        df = pd.read_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/train.csv")
+        df = pd.read_csv("/home/tsutar3/HEART/data/train.csv")
     else:
         df = pd.read_parquet("hf://datasets/OpenAssistant/oasst1/" + splits["train"])
         df = df[df["lang"] == "en"]
@@ -34,14 +34,14 @@ def func():
         'prompt': [json.dumps([{"role": "user", "content": p}]) for p in df_prompt],
         'completion': [json.dumps([{"role": "assistant", "content": r}]) for r in df_response]
         })
-        df.to_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/train.csv", index=False)
+        df.to_csv("/home/tsutar3/HEART/data/train.csv", index=False)
 
-    df_conv = pd.read_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_data/v13_update_output_filtered.csv", index_col=False)
+    df_conv = pd.read_csv("/home/tsutar3/HEART/data/convo_for_memory.csv", index_col=False)
     '''
     Selecting just the final agent input and output since that is the relavant data we need and removing the earlier agent inputs and outputs.
     '''
-    df_conv = df_conv.iloc[1:][["agent3_prompt", "agent3_output_filtered"]]
-    df_conv.to_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/conv.csv", index=True)
+    df_conv = df_conv.iloc[1:][["agent3_prompt", "agent3_output_converted", "base_data_source"]]
+    df_conv.to_csv("/home/tsutar3/HEART/data/tmp/memory_convo.csv", index=True)
 
     keys = ['role', 'message']
 
@@ -77,7 +77,7 @@ def func():
     I'm saving the data to a csv file to use it later on.
     '''
     conv = pd.DataFrame({'prompt': prompt, 'completion': output})
-    conv.to_csv("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/toxic_conv.csv", index=False)
+    conv.to_csv("/home/tsutar3/HEART/data/tmp/memory_conv_clean.csv", index=False)
 
     print(f"Number of problematic rows: {len(problem)}")
 
@@ -89,7 +89,7 @@ def func():
     '''
     I'm saving the promptts separately as we need to shorten it latern on to remove json stuff in it....
     '''
-    with open("/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v13/prompt.json", "w") as file:
+    with open("/home/tsutar3/HEART/data/tmp/memory_prompt.json", "w") as file:
         file.write("[")  # Add newline to separate each JSON object
         for item in lst:
             json.dump({"content": item}, file)

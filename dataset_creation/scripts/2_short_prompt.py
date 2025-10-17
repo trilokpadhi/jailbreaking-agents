@@ -15,7 +15,7 @@ def run_ollama(prompt):
     This function is used to run the Llama3.2 model on the prompt and get the output.
     I didn't know about AutoGen so I'm using command line tool for ollama to run this and fetching the terminal output...
     '''
-    command = ["ollama", "run", "llama3.2:1b", prompt]
+    command = ["/home/tsutar3/ollama/bin/ollama", "run", "llama3.2", prompt]
     try:
         result = subprocess.run(command, capture_output=True, text=True, check=True, timeout=90)
         return result.stdout.strip()
@@ -37,7 +37,7 @@ def process_prompt(entry):
     return {"content": output_text}
 
 def main():
-    input_filename = "/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v16/prompt.json"
+    input_filename = "/home/tsutar3/HEART/data/tmp/memory_prompt.json"
     
     with open(input_filename, "r", encoding="utf-8") as f:
         prompts = json.load(f)
@@ -46,17 +46,17 @@ def main():
     I used multiprocessing to make thius script use all my CPU cores to make inference a little faster...
     '''
     # Use all available CPU cores
-    num_processes = 6
+    num_processes = 8
     
     with Pool(processes=num_processes) as pool:
-        results = list(tqdm(pool.imap(process_prompt, prompts), total=min(5, len(prompts))))
+        results = list(tqdm(pool.imap(process_prompt, prompts), total=min(num_processes, len(prompts))))
 
     out = [result for result in results if result is not None]
 
     '''
     I saved the output in a json file to use it in the next step of the pipeline.
     '''
-    output_filename = "/Users/tanmay/GaTech_Atlanta/SocWeb Lab/data/toxic_finetune_data/v16/short_prompt.json"
+    output_filename = "/home/tsutar3/HEART/data/tmp/memory_short_prompt.json"
     with open(output_filename, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=1, ensure_ascii=False)
 
