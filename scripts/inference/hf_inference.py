@@ -286,9 +286,9 @@ def main():
                        default="meta-llama/Llama-2-7b-chat-hf",
                        help="HuggingFace model name (e.g., 'meta-llama/Llama-2-7b-chat-hf')")
     parser.add_argument("--csv_path", type=str,
-                       default="/home/tsutar3/HEART/data/insta/type7_version3_output.csv",
+                       default="/home/tsutar3/jailbreaking-agents/data/insta/type7_version3_output.csv",
                        help="Path to input CSV file")
-    parser.add_argument("--output_path", type=str, default="/home/tsutar3/HEART/results/",
+    parser.add_argument("--output_path", type=str, default="/home/tsutar3/jailbreaking-agents/convos/",
                        help="Path to output CSV file (optional, auto-generated if not provided)")
     parser.add_argument("--sample_size", type=int, default=None,
                        help="Sample size for testing (optional)")
