@@ -1,0 +1,153 @@
+THE BASIC IDEA
+--------------
+
+You need two things running at the same time:
+1. The vLLM server (serves your model)
+2. The inference script (processes your CSV files)
+3. you'll need to change OUTPUT_DIR to your own directory in vllm_lora_inference.py and you should be 
+able to access files in /data50 directory to read the model weights i saved there. 
+You wont be able to save files in shared_models/finetuned or shared_models/tsutar3_hf_cache/ since I created
+those folders but you should be able to save stuff at /data50/shared_models or /data50/shared_resources.
+But you wont need to since resultant csv files are small and can be saved to your own user directory
+
+tmux lets you split your terminal so you can see both at once. Pretty handy!
+
+
+STEP-BY-STEP WALKTHROUGH
+-------------------------
+
+1. Get into the right directory and start tmux:
+
+   cd /home/tsutar3/jailbreaking-agents/scripts/inference and then,
+   tmux new -s inference
+
+   This creates a new tmux session called "inference". You're now inside tmux!
+
+
+2. create a new window so you have two panes:
+
+   Press: Ctrl+b then press 'c'. to circle through windoes, use Ctrl+b and then 'n' or 'p'.
+
+
+3. Start the vLLM server in the first pane:
+
+   Run this:
+
+   ./launch_vllm_lora_server.sh llama-3.1-8b-10pct-lora 2
+
+   This loads the Llama 3.1 8B model with the 10% LoRA adapter and puts it on 2 GPUs.
+
+   Want to use a different adapter? Just change the name:
+   - llama-3.1-8b-20pct-lora
+   - llama-3.1-8b-40pct-lora
+   - llama-3.1-8b-60pct-lora
+   - llama-3.1-8b-80pct-lora
+
+   num gpus varies by server. tiramisu has 6, tricorder has 4, worf has 6 or 8.
+
+
+4. Wait for the server to fully start up:
+
+   You'll see a bunch of loading messages. Wait until you see:
+
+   "INFO:     Uvicorn running on http://0.0.0.0:8000"
+   "INFO:     Application startup complete."
+
+   This usually takes 30-60 seconds or longer. Be patient!
+
+
+5. Switch to the next pane and run inference:
+
+   Press: Ctrl+b then 'n' or 'p'
+
+   Now run your inference script:
+
+   python vllm_lora_inference.py \
+       --lora_name llama-3.1-8b-10pct-lora \
+       --input_csv 10pct.csv \
+       --max_workers 32
+
+   The script will process all rows in the CSV and save results to:
+   /home/tsutar3/jailbreaking-agents/convos/llama31_8b_10pct_convos.csv
+
+
+
+TMUX SURVIVAL GUIDE
+-------------------
+
+Here are the key shortcuts you'll need:
+
+Moving around:
+  Ctrl+b then arrow keys  -> Switch between panes
+  Ctrl+b then n or p           -> Cycle through windows
+  Ctrl+b then z           -> Zoom into current pane (toggle fullscreen)
+  Crtl_b then x           -> kill current window
+
+Scrolling (when logs fill up):
+  Ctrl+b then [           -> Enter scroll mode
+  Arrow keys or Page Up/Down to scroll
+  Press q to exit scroll mode
+
+Detaching and reattaching:
+  Ctrl+b then d           -> Detach (keeps everything running)
+  tmux ls                 -> List sessions
+  tmux attach -t inference -> Reattach to your session
+
+Starting fresh:
+  tmux kill-session -t inference  -> Kill the session and start over
+
+
+WHEN THINGS GO WRONG
+--------------------
+
+Server won't start:
+  - Check if something's already using port 8000:
+    lsof -i :8000
+  - Kill it: kill -9 <PID>
+
+Connection refused errors:
+  - Wait longer! Model loading takes time.
+  - Check the server pane for "startup complete" message.
+  - Test it: curl http://localhost:8000/health
+
+Out of memory:
+  - Use multiple GPUs: ./launch_vllm_lora_server.sh <name> 2
+
+Inference is super slow:
+  - Reduce max_workers: try --max_workers 16
+  - Check GPU utilization in another terminal: nvidia-smi -l 1
+
+Everything is frozen:
+  - Ctrl+C to stop current process
+  - Ctrl+d to exit pane
+  - Ctrl+b then x to kill pane (confirm with y)
+
+
+WHAT YOU GET AT THE END
+------------------------
+
+All your results go to: /home/tsutar3/jailbreaking-agents/convos/
+
+Files will be named like:
+  - llama31_8b_10pct_convos.csv
+  - llama31_8b_20pct_convos.csv
+  - etc.
+
+Each file has all the original columns PLUS a new 'bully_chat_history' column
+with the generated conversations in JSON format.
+
+
+
+QUICK REFERENCE
+---------------
+
+Full command template:
+
+Server side:
+  ./launch_vllm_lora_server.sh <lora-name> [num-gpus]
+
+Inference side:
+  python vllm_lora_inference.py \
+      --lora_name <lora-name> \
+      --input_csv <csv-file> \
+      --max_workers <num>
