@@ -1,29 +1,27 @@
 #!/usr/bin/env python3
 import os
 import json
-import time
+import asyncio
 import pandas as pd
-from openai import OpenAI
-from tqdm import tqdm
+from openai import AsyncOpenAI
+from tqdm.asyncio import tqdm_asyncio
 import logging
 from dotenv import load_dotenv
 load_dotenv()
+
 # ──────────────────────────────────────────────────────────────────────────────
 # CONFIGURATION | *****ONLY PLACE THAT REQUIRES EDITS*****
 # ──────────────────────────────────────────────────────────────────────────────
-client = OpenAI(api_key=os.getenv("OPENAI_KEY"))
-INPUT_CSV     = "/home/tsutar3/jailbreaking-agents/convos/llama31_8b_10pct_convos.csv"  # Replace with your input CSV file path
+INPUT_CSV     = "/home/tsutar3/jailbreaking-agents/convos/llama31_8b_80pct_convos.csv"
+MAX_CONCURRENT = 100  # Adjust based on your rate limits (tier 1 = ~500 RPM for gpt-4o-mini)
 
 # ──────────────────────────────────────────────────────────────────────────────
 FILE_NAME     = INPUT_CSV.split("/")[-1].replace(".csv", "")
 OUTPUT_DIR    = f"/home/tsutar3/jailbreaking-agents/llm_judge_evals/{FILE_NAME}"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-BATCH_JSONL   = f"{OUTPUT_DIR}/{FILE_NAME}_bullying_tasks.jsonl"
-RESULTS_JSONL = f"{OUTPUT_DIR}/{FILE_NAME}_bullying_results.jsonl"
-OUTPUT_CSV    = f"{OUTPUT_DIR}/{FILE_NAME}_output_with_analysis_batch.csv"
+OUTPUT_CSV    = f"{OUTPUT_DIR}/{FILE_NAME}_output_with_analysis.csv"
 MODEL         = "gpt-4o-mini-2024-07-18"
-WINDOW        = "24h"
-logfile = f"{OUTPUT_DIR}/{FILE_NAME}_batch_tracking.log"
+logfile = f"{OUTPUT_DIR}/{FILE_NAME}_async_tracking.log"
 logging.basicConfig(filename=logfile, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -78,105 +76,84 @@ CLASSIFICATION:
 """
 
 # ──────────────────────────────────────────────────────────────────────────────
-# MAIN FUNCTION
+# ASYNC API CALLS
 # ──────────────────────────────────────────────────────────────────────────────
-def main():
+client = AsyncOpenAI(api_key=os.getenv("OPENAI_KEY"))
+semaphore = None  # Will be initialized in main
+
+async def judge_turn(row_idx: int, turn_idx: int, turn_text: str) -> tuple:
+    """Call OpenAI API to judge a single turn."""
+    async with semaphore:
+        try:
+            response = await client.chat.completions.create(
+                model=MODEL,
+                temperature=0.2,
+                max_tokens=400,
+                messages=[
+                    {"role": "system", "content": JUDGE_PROMPT.format(turn_text=turn_text)}
+                ]
+            )
+            result = response.choices[0].message.content
+            return (row_idx, turn_idx, result, None)
+        except Exception as e:
+            logging.error(f"Error at row {row_idx}, turn {turn_idx}: {e}")
+            return (row_idx, turn_idx, None, str(e))
+
+async def main():
+    global semaphore
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT)
+
     df = pd.read_csv(INPUT_CSV)
+    print(f"Total convos: {len(df)}")
     assert "bully_chat_history" in df.columns, "Missing 'bully_chat_history' column"
 
-    # Step 1: Create batch tasks
-    total_tasks = 0
+    # Step 1: Build list of tasks
+    tasks = []
     count_errors = 0
-    with open(BATCH_JSONL, "w") as fout:
-        for idx, row in tqdm(df.iterrows(), total=len(df), desc="Creating batch tasks"):
-            raw = row["bully_chat_history"]
-            try:
-                history = json.loads(raw)
-                for m in history:
-                    role = m.get("role", "").strip().lower()
-                    m["role"] = "victim" if role == "victim" else "harasser"
-                assistant_turns = [m for m in history if m["role"] == "harasser"]
-                for t_i, turn in enumerate(assistant_turns):
-                    task = {
-                        "custom_id": f"{idx}-{t_i}",
-                        "method": "POST",
-                        "url": "/v1/chat/completions",
-                        "body": {
-                            "model": MODEL,
-                            "temperature": 0.2,
-                            "max_tokens": 400,
-                            "messages": [
-                                {"role": "system", "content": JUDGE_PROMPT.format(turn_text=turn["content"])}
-                            ]
-                        }
-                    }
-                    fout.write(json.dumps(task) + "\n")
-                    total_tasks += 1
-            except Exception as e:
-                count_errors += 1
-                print(f"Error parsing JSON at row {idx}: {e}")
-                continue
-    print("total errors:", count_errors)
-    print(f"Wrote {total_tasks} tasks to {BATCH_JSONL}\n")
 
-    # Step 2: Upload + Start Batch Job
-    batch_file = client.files.create(file=open(BATCH_JSONL, "rb"), purpose="batch")
-    job = client.batches.create(input_file_id=batch_file.id, endpoint="/v1/chat/completions", completion_window=WINDOW)
-    job_id = job.id
-    print("Batch job created:", job_id)
-    logging.info(f"Batch job created: {job_id}")
+    print("Preparing tasks...")
+    for idx, row in df.iterrows():
+        raw = row["bully_chat_history"]
+        try:
+            history = json.loads(raw)
+            for m in history:
+                role = m.get("role", "").strip().lower()
+                m["role"] = "victim" if role == "victim" else "harasser"
+            assistant_turns = [m for m in history if m["role"] == "harasser"]
+            for t_i, turn in enumerate(assistant_turns):
+                tasks.append(judge_turn(idx, t_i, turn["content"]))
+        except Exception as e:
+            count_errors += 1
+            print(f"Error parsing JSON at row {idx}: {e}")
+            continue
 
-    # Save metadata
-    metadata = {
-        "job_id": job_id,
-        "input_file": BATCH_JSONL,
-        "created_at": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "status": "submitted"
-    }
-    with open(f"{OUTPUT_DIR}/{FILE_NAME}_batch_metadata.json", "w") as f:
-        json.dump(metadata, f, indent=4)
+    print(f"Parse errors: {count_errors}")
+    print(f"Total tasks: {len(tasks)}")
+    print(f"Processing with {MAX_CONCURRENT} concurrent requests...\n")
 
-    # Step 3: Poll until complete
-    while True:
-        job_info = client.batches.retrieve(job_id)
-        status = job_info.status
-        print(f"Status: {status}", end="\r", flush=True)
-        logging.info(f"Batch status: {status}")
+    # Step 2: Run all tasks concurrently with progress bar
+    results_raw = await tqdm_asyncio.gather(*tasks, desc="Judging turns")
 
-        if status == "completed":
-            metadata["status"] = "completed"
-            with open(f"{OUTPUT_DIR}/{FILE_NAME}_batch_metadata.json", "w") as f:
-                json.dump(metadata, f, indent=4)
-            break
-        elif status == "failed":
-            logging.error(f"❌ Batch job {job_id} failed.")
-            metadata["status"] = "failed"
-            with open(f"{OUTPUT_DIR}/{FILE_NAME}_batch_metadata.json", "w") as f:
-                json.dump(metadata, f, indent=4)
-            raise RuntimeError("Batch job failed.")
-
-        time.sleep(60)
-    print(f"Status: completed         \n")
-
-    # Step 4: Download results
-    out_id = client.batches.retrieve(job_id).output_file_id
-    content = client.files.content(out_id).content
-    with open(RESULTS_JSONL, "wb") as fout:
-        fout.write(content)
-    print(f"Results saved to {RESULTS_JSONL}\n")
-
-    # Step 5: Merge results into dataframe
+    # Step 3: Organize results by row
     results = {}
-    with open(RESULTS_JSONL, "r") as fin:
-        for line in tqdm(fin, desc="Parsing results"):
-            obj = json.loads(line)
-            row_idx, turn_idx = map(int, obj["custom_id"].split("-"))
-            text = obj["response"]["body"]["choices"][0]["message"]["content"]
-            results.setdefault(row_idx, []).append((turn_idx, text))
+    errors = 0
+    for row_idx, turn_idx, result, error in results_raw:
+        if error:
+            errors += 1
+            continue
+        results.setdefault(row_idx, []).append((turn_idx, result))
 
-    for idx, cls_list in tqdm(results.items(), desc="Merging into DataFrame", total=len(results)):
+    print(f"\nCompleted with {errors} API errors")
+
+    # Step 4: Merge results into dataframe
+    for idx, cls_list in results.items():
         cls_list.sort(key=lambda x: x[0])
-        parsed = [json.loads(c) for _, c in cls_list]
+        parsed = []
+        for _, c in cls_list:
+            try:
+                parsed.append(json.loads(c))
+            except json.JSONDecodeError:
+                parsed.append({"error": "invalid JSON", "raw": c})
         df.at[idx, "classified_bully_chat_history"] = json.dumps(parsed, ensure_ascii=False)
 
     df.to_csv(OUTPUT_CSV, index=False)
@@ -184,9 +161,4 @@ def main():
 
 # ──────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    main()
-
-
-"""
-nohup python llm-judge-final.py > llm-judge-final1.log 2>&1 &
-"""
+    asyncio.run(main())
