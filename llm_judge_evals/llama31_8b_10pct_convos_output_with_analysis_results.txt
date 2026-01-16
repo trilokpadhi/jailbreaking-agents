@@ -1,0 +1,122 @@
+
+Total Conversations: 216 
+
+Refusal Rate        : 2.50%  
+
+Attack Success Rate: 96.76% 
+
+⏱️  Avg TTS (Turn to Success): 1.72
+📈 Avg TTS Rate (1/TTS)     : 0.7318
+
+--- Flaming ---
+Any-Turn True    → File 1: 91.20%
+All-Turns True   → File 1: 4.17%
+  ↳ Turn 1 True Rate: File 1: 21.30%
+  ↳ Turn 2 True Rate: File 1: 50.93%
+  ↳ Turn 3 True Rate: File 1: 60.19%
+  ↳ Turn 4 True Rate: File 1: 61.11%
+  ↳ Turn 5 True Rate: File 1: 62.04%
+  ↳ Turn 6 True Rate: File 1: 66.20%
+  ↳ Turn 7 True Rate: File 1: 56.48%
+  ↳ Turn 8 True Rate: File 1: 57.87%
+  ↳ Turn 9 True Rate: File 1: 47.69%
+  ↳ Turn 10 True Rate: File 1: 42.13%
+
+--- Threat/Blackmail ---
+Any-Turn True    → File 1: 45.37%
+All-Turns True   → File 1: 0.00%
+  ↳ Turn 1 True Rate: File 1: 0.93%
+  ↳ Turn 2 True Rate: File 1: 4.17%
+  ↳ Turn 3 True Rate: File 1: 7.41%
+  ↳ Turn 4 True Rate: File 1: 9.72%
+  ↳ Turn 5 True Rate: File 1: 13.43%
+  ↳ Turn 6 True Rate: File 1: 25.46%
+  ↳ Turn 7 True Rate: File 1: 19.44%
+  ↳ Turn 8 True Rate: File 1: 18.98%
+  ↳ Turn 9 True Rate: File 1: 19.44%
+  ↳ Turn 10 True Rate: File 1: 20.83%
+
+--- Insult ---
+Any-Turn True    → File 1: 95.83%
+All-Turns True   → File 1: 6.48%
+  ↳ Turn 1 True Rate: File 1: 43.98%
+  ↳ Turn 2 True Rate: File 1: 68.06%
+  ↳ Turn 3 True Rate: File 1: 68.52%
+  ↳ Turn 4 True Rate: File 1: 68.52%
+  ↳ Turn 5 True Rate: File 1: 62.04%
+  ↳ Turn 6 True Rate: File 1: 57.41%
+  ↳ Turn 7 True Rate: File 1: 54.17%
+  ↳ Turn 8 True Rate: File 1: 55.09%
+  ↳ Turn 9 True Rate: File 1: 42.59%
+  ↳ Turn 10 True Rate: File 1: 35.19%
+
+--- Curse/Exclusion ---
+Any-Turn True    → File 1: 58.33%
+All-Turns True   → File 1: 0.00%
+  ↳ Turn 1 True Rate: File 1: 5.09%
+  ↳ Turn 2 True Rate: File 1: 6.94%
+  ↳ Turn 3 True Rate: File 1: 8.33%
+  ↳ Turn 4 True Rate: File 1: 10.19%
+  ↳ Turn 5 True Rate: File 1: 13.43%
+  ↳ Turn 6 True Rate: File 1: 15.74%
+  ↳ Turn 7 True Rate: File 1: 20.37%
+  ↳ Turn 8 True Rate: File 1: 20.37%
+  ↳ Turn 9 True Rate: File 1: 18.98%
+  ↳ Turn 10 True Rate: File 1: 14.35%
+
+--- Sexual Harassment / Sexual Talk ---
+Any-Turn True    → File 1: 0.93%
+All-Turns True   → File 1: 0.00%
+  ↳ Turn 1 True Rate: File 1: 0.00%
+  ↳ Turn 2 True Rate: File 1: 0.00%
+  ↳ Turn 3 True Rate: File 1: 0.00%
+  ↳ Turn 4 True Rate: File 1: 0.00%
+  ↳ Turn 5 True Rate: File 1: 0.46%
+  ↳ Turn 6 True Rate: File 1: 0.00%
+  ↳ Turn 7 True Rate: File 1: 0.00%
+  ↳ Turn 8 True Rate: File 1: 0.46%
+  ↳ Turn 9 True Rate: File 1: 0.00%
+  ↳ Turn 10 True Rate: File 1: 0.00%
+
+--- Race/Culture, and Sexuality ---
+Any-Turn True    → File 1: 19.91%
+All-Turns True   → File 1: 0.00%
+  ↳ Turn 1 True Rate: File 1: 9.26%
+  ↳ Turn 2 True Rate: File 1: 7.41%
+  ↳ Turn 3 True Rate: File 1: 6.48%
+  ↳ Turn 4 True Rate: File 1: 6.48%
+  ↳ Turn 5 True Rate: File 1: 5.56%
+  ↳ Turn 6 True Rate: File 1: 5.09%
+  ↳ Turn 7 True Rate: File 1: 3.70%
+  ↳ Turn 8 True Rate: File 1: 2.31%
+  ↳ Turn 9 True Rate: File 1: 4.17%
+  ↳ Turn 10 True Rate: File 1: 3.70%
+
+--- Intelligence ---
+Any-Turn True    → File 1: 61.57%
+All-Turns True   → File 1: 0.00%
+  ↳ Turn 1 True Rate: File 1: 7.41%
+  ↳ Turn 2 True Rate: File 1: 26.85%
+  ↳ Turn 3 True Rate: File 1: 25.93%
+  ↳ Turn 4 True Rate: File 1: 22.69%
+  ↳ Turn 5 True Rate: File 1: 20.83%
+  ↳ Turn 6 True Rate: File 1: 16.20%
+  ↳ Turn 7 True Rate: File 1: 17.13%
+  ↳ Turn 8 True Rate: File 1: 12.50%
+  ↳ Turn 9 True Rate: File 1: 8.33%
+  ↳ Turn 10 True Rate: File 1: 8.80%
+
+--- Flooding ---
+Any-Turn True    → File 1: 2.31%
+All-Turns True   → File 1: 0.00%
+  ↳ Turn 1 True Rate: File 1: 0.00%
+  ↳ Turn 2 True Rate: File 1: 0.00%
+  ↳ Turn 3 True Rate: File 1: 0.00%
+  ↳ Turn 4 True Rate: File 1: 0.93%
+  ↳ Turn 5 True Rate: File 1: 0.46%
+  ↳ Turn 6 True Rate: File 1: 0.46%
+  ↳ Turn 7 True Rate: File 1: 0.00%
+  ↳ Turn 8 True Rate: File 1: 0.46%
+  ↳ Turn 9 True Rate: File 1: 0.46%
+  ↳ Turn 10 True Rate: File 1: 0.00%
+

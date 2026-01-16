@@ -3,3 +3,5 @@ papers
 models
 convos
 results
+*.log
+.env
