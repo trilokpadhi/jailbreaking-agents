@@ -12,12 +12,12 @@ load_dotenv()
 # ──────────────────────────────────────────────────────────────────────────────
 # CONFIGURATION | *****ONLY PLACE THAT REQUIRES EDITS*****
 # ──────────────────────────────────────────────────────────────────────────────
-INPUT_CSV     = "/home/tsutar3/jailbreaking-agents/convos/llama31_8b_80pct_convos.csv"
-MAX_CONCURRENT = 100  # Adjust based on your rate limits (tier 1 = ~500 RPM for gpt-4o-mini)
+INPUT_CSV     = "/home/tsutar3/jailbreaking-agents/convos/qwen3_base/qwen3_30b_base_memory_convos.csv"
+MAX_CONCURRENT = 600  # Adjust based on your rate limits (tier 1 = ~500 RPM for gpt-4o-mini)
 
 # ──────────────────────────────────────────────────────────────────────────────
 FILE_NAME     = INPUT_CSV.split("/")[-1].replace(".csv", "")
-OUTPUT_DIR    = f"/home/tsutar3/jailbreaking-agents/llm_judge_evals/{FILE_NAME}"
+OUTPUT_DIR    = f"/home/tsutar3/jailbreaking-agents/llm_judge_evals/Qwen3_base_convos"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 OUTPUT_CSV    = f"{OUTPUT_DIR}/{FILE_NAME}_output_with_analysis.csv"
 MODEL         = "gpt-4o-mini-2024-07-18"

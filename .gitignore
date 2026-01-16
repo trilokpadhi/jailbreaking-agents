@@ -2,3 +2,4 @@
 convos/
 data/
 llm_judge_evals/
+*.log
