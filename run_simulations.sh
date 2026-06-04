@@ -23,16 +23,16 @@ OLLAMA_HOST=127.0.0.1:11437 ../ollamatry/bin/ollama pull llama3.1
 
 
 # Run the parallel processing script for no memory version
-python agent-jailbreak_parallel_v2.py --input_csv datasets/type3_Jun29_combined_balanced_output.csv --output_dir generations_/ --planning_method none > output_no_memory.log 2>&1 
+python agent-jailbreak_parallel_v2.py --input_csv datasets/type3_Aug21_combined_balanced_output.csv --output_dir generations_/ --planning_method none > output_no_memory.log 2>&1 
 echo "Completed no memory version"
 # Run the parallel processing script for memory version
-python agent-jailbreak_parallel_v2.py --input_csv datasets/type3_Jun29_combined_balanced_output.csv --output_dir generations_/ --planning_method none --with_memory > output_memory.log 2>&1 
+python agent-jailbreak_parallel_v2.py --input_csv datasets/type3_Aug21_combined_balanced_output.csv --output_dir generations_/ --planning_method none --with_memory > output_memory.log 2>&1 
 echo "Completed memory version"
 # Run the parallel processing script for ReACT version
-python agent-jailbreak_parallel_v2.py --input_csv datasets/type3_Jun29_combined_balanced_output.csv --output_dir generations_/ --planning_method react > output_react.log 2>&1
+python agent-jailbreak_parallel_v2.py --input_csv datasets/type3_Aug21_combined_balanced_output.csv --output_dir generations_/ --planning_method react > output_react.log 2>&1
 echo "Completed ReACT version"
 # Run the parallel processing script for cot version
-python agent-jailbreak_parallel_v2.py --input_csv datasets/type3_Jun29_combined_balanced_output.csv --output_dir generations_/ --planning_method cot > output_cot.log 2>&1
+python agent-jailbreak_parallel_v2.py --input_csv datasets/type3_Aug21_combined_balanced_output.csv --output_dir generations_/ --planning_method cot > output_cot.log 2>&1
 echo "Completed cot version"
 
 

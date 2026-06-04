@@ -1,0 +1,131 @@
+Using column: bully_chat_history
+Total tasks to process: 13830
+
+Classifying:   0%|          | 0/13830 [00:00<?, ?it/s]Classifying:   0%|          | 1/13830 [00:02<9:19:40,  2.43s/it]Classifying:   0%|          | 4/13830 [00:03<2:44:31,  1.40it/s]Classifying:   0%|          | 11/13830 [00:07<2:12:12,  1.74it/s]Classifying:   0%|          | 46/13830 [00:33<2:44:55,  1.39it/s]Classifying:   0%|          | 55/13830 [00:34<2:12:54,  1.73it/s]Classifying:   3%|▎         | 351/13830 [00:50<22:21, 10.05it/s] Classifying:   6%|▌         | 791/13830 [00:51<07:33, 28.75it/s]Classifying:   6%|▌         | 815/13830 [00:52<07:26, 29.14it/s]Classifying:   6%|▌         | 833/13830 [00:57<10:17, 21.06it/s]Classifying:   7%|▋         | 957/13830 [00:58<07:27, 28.79it/s]Classifying:   7%|▋         | 978/13830 [01:01<08:43, 24.54it/s]Classifying:   7%|▋         | 1007/13830 [01:01<07:51, 27.20it/s]Classifying:   7%|▋         | 1028/13830 [01:02<08:09, 26.13it/s]Classifying:   7%|▋         | 1035/13830 [01:08<17:49, 11.96it/s]Classifying:   8%|▊         | 1044/13830 [01:18<37:22,  5.70it/s]Classifying:   9%|▉         | 1266/13830 [01:20<09:56, 21.08it/s]Classifying:   9%|▉         | 1289/13830 [01:23<11:44, 17.79it/s]Classifying:  10%|▉         | 1349/13830 [01:27<12:15, 16.97it/s]Classifying:  10%|▉         | 1362/13830 [01:27<11:52, 17.50it/s]Classifying:  10%|▉         | 1380/13830 [01:28<10:54, 19.02it/s]Classifying:  10%|█         | 1408/13830 [01:28<08:40, 23.85it/s]Classifying:  11%|█         | 1468/13830 [01:36<16:46, 12.29it/s]Classifying:  12%|█▏        | 1649/13830 [01:49<15:00, 13.53it/s]Classifying:  13%|█▎        | 1866/13830 [01:49<07:14, 27.54it/s]Classifying:  14%|█▎        | 1886/13830 [01:49<06:57, 28.61it/s]Classifying:  14%|█▍        | 1902/13830 [01:50<07:14, 27.44it/s]Classifying:  14%|█▍        | 1914/13830 [01:51<07:09, 27.74it/s]Classifying:  14%|█▍        | 1923/13830 [01:53<09:27, 21.00it/s]Classifying:  14%|█▍        | 1948/13830 [01:56<12:35, 15.72it/s]Classifying:  15%|█▍        | 2012/13830 [01:56<07:43, 25.51it/s]Classifying:  15%|█▍        | 2021/13830 [01:58<09:29, 20.73it/s]Classifying:  15%|█▍        | 2034/13830 [01:58<10:10, 19.31it/s]Classifying:  15%|█▍        | 2051/13830 [01:59<09:02, 21.71it/s]Classifying:  15%|█▍        | 2061/13830 [01:59<08:06, 24.21it/s]Classifying:  15%|█▍        | 2066/13830 [02:00<09:39, 20.29it/s]Classifying:  15%|█▍        | 2073/13830 [02:00<10:32, 18.60it/s]Classifying:  15%|█▌        | 2094/13830 [02:03<15:34, 12.56it/s]Classifying:  15%|█▌        | 2106/13830 [02:05<21:39,  9.03it/s]Classifying:  16%|█▌        | 2189/13830 [02:08<10:18, 18.83it/s]Classifying:  16%|█▌        | 2235/13830 [02:08<06:51, 28.19it/s]Classifying:  16%|█▌        | 2244/13830 [02:08<06:57, 27.75it/s]Classifying:  16%|█▋        | 2251/13830 [02:09<07:16, 26.56it/s]Classifying:  16%|█▋        | 2259/13830 [02:09<06:55, 27.84it/s]Classifying:  16%|█▋        | 2265/13830 [02:09<07:13, 26.66it/s]Classifying:  16%|█▋        | 2270/13830 [02:10<09:05, 21.18it/s]Classifying:  16%|█▋        | 2274/13830 [02:14<33:16,  5.79it/s]Classifying:  17%|█▋        | 2331/13830 [02:14<09:52, 19.41it/s]Classifying:  17%|█▋        | 2339/13830 [02:14<10:01, 19.12it/s]Classifying:  17%|█▋        | 2363/13830 [02:15<06:57, 27.48it/s]Classifying:  17%|█▋        | 2372/13830 [02:15<06:28, 29.48it/s]Classifying:  17%|█▋        | 2380/13830 [02:16<08:53, 21.47it/s]Classifying:  17%|█▋        | 2402/13830 [02:17<10:53, 17.48it/s]Classifying:  17%|█▋        | 2407/13830 [02:18<10:56, 17.41it/s]Classifying:  18%|█▊        | 2424/13830 [02:18<08:37, 22.06it/s]Classifying:  18%|█▊        | 2434/13830 [02:19<11:01, 17.23it/s]Classifying:  18%|█▊        | 2460/13830 [02:19<07:25, 25.50it/s]Classifying:  18%|█▊        | 2464/13830 [02:20<09:41, 19.56it/s]Classifying:  18%|█▊        | 2467/13830 [02:20<09:32, 19.84it/s]Classifying:  18%|█▊        | 2471/13830 [02:24<31:04,  6.09it/s]Classifying:  18%|█▊        | 2517/13830 [02:24<09:27, 19.92it/s]Classifying:  18%|█▊        | 2537/13830 [02:24<06:59, 26.94it/s]Classifying:  18%|█▊        | 2550/13830 [02:25<09:03, 20.75it/s]Classifying:  19%|█▊        | 2560/13830 [02:25<08:29, 22.11it/s]Classifying:  19%|█▊        | 2568/13830 [02:27<13:11, 14.22it/s]Classifying:  19%|█▊        | 2592/13830 [02:27<08:38, 21.68it/s]Classifying:  19%|█▊        | 2592/13830 [02:40<08:38, 21.68it/s]Classifying:  19%|█▉        | 2598/13830 [03:15<3:31:12,  1.13s/it]Classifying:  22%|██▏       | 3042/13830 [03:22<15:49, 11.36it/s]  Classifying:  22%|██▏       | 3081/13830 [03:30<17:52, 10.02it/s]Classifying:  27%|██▋       | 3671/13830 [03:39<06:56, 24.38it/s]Classifying:  27%|██▋       | 3671/13830 [03:50<06:56, 24.38it/s]Classifying:  27%|██▋       | 3697/13830 [04:00<12:16, 13.76it/s]Classifying:  29%|██▉       | 3996/13830 [04:15<10:25, 15.72it/s]Classifying:  29%|██▉       | 4052/13830 [04:19<10:40, 15.26it/s]Classifying:  33%|███▎      | 4571/13830 [04:20<04:26, 34.74it/s]Classifying:  33%|███▎      | 4629/13830 [04:22<04:40, 32.81it/s]Classifying:  34%|███▍      | 4670/13830 [04:26<05:22, 28.37it/s]Classifying:  34%|███▍      | 4699/13830 [04:27<05:04, 30.03it/s]Classifying:  34%|███▍      | 4723/13830 [04:34<08:34, 17.71it/s]Classifying:  35%|███▍      | 4814/13830 [04:38<07:38, 19.64it/s]Classifying:  36%|███▌      | 4917/13830 [04:38<05:09, 28.79it/s]Classifying:  36%|███▌      | 4949/13830 [04:39<05:13, 28.36it/s]Classifying:  36%|███▌      | 4973/13830 [04:42<06:31, 22.60it/s]Classifying:  36%|███▌      | 4990/13830 [04:42<06:00, 24.51it/s]Classifying:  36%|███▌      | 5004/13830 [04:45<09:11, 15.99it/s]Classifying:  36%|███▌      | 5004/13830 [05:00<09:11, 15.99it/s]Classifying:  36%|███▌      | 5011/13830 [05:15<55:03,  2.67it/s]Classifying:  41%|████      | 5613/13830 [05:16<05:15, 26.08it/s]Classifying:  41%|████      | 5652/13830 [05:16<04:54, 27.79it/s]Classifying:  41%|████      | 5675/13830 [05:18<05:18, 25.57it/s]Classifying:  41%|████      | 5691/13830 [05:28<09:31, 14.23it/s]Classifying:  42%|████▏     | 5842/13830 [05:29<05:35, 23.83it/s]Classifying:  43%|████▎     | 5894/13830 [05:29<04:50, 27.35it/s]Classifying:  43%|████▎     | 5907/13830 [05:30<04:51, 27.18it/s]Classifying:  43%|████▎     | 5924/13830 [05:30<04:36, 28.56it/s]Classifying:  43%|████▎     | 5944/13830 [05:30<04:14, 31.00it/s]Classifying:  43%|████▎     | 5952/13830 [05:31<04:22, 29.99it/s]Classifying:  43%|████▎     | 5958/13830 [05:31<04:25, 29.66it/s]Classifying:  43%|████▎     | 5964/13830 [05:31<04:17, 30.56it/s]Classifying:  43%|████▎     | 5974/13830 [05:32<06:05, 21.52it/s]Classifying:  43%|████▎     | 5983/13830 [05:35<12:16, 10.65it/s]Classifying:  44%|████▎     | 6035/13830 [05:37<07:42, 16.84it/s]Classifying:  44%|████▍     | 6097/13830 [05:37<04:08, 31.12it/s]Classifying:  44%|████▍     | 6104/13830 [05:37<03:57, 32.47it/s]Classifying:  44%|████▍     | 6111/13830 [05:38<05:31, 23.27it/s]Classifying:  44%|████▍     | 6119/13830 [05:39<05:38, 22.76it/s]Classifying:  44%|████▍     | 6136/13830 [05:43<13:14,  9.69it/s]Classifying:  45%|████▌     | 6225/13830 [05:43<04:29, 28.23it/s]Classifying:  45%|████▌     | 6234/13830 [05:47<09:31, 13.29it/s]Classifying:  46%|████▌     | 6322/13830 [05:48<04:18, 29.09it/s]Classifying:  46%|████▌     | 6341/13830 [05:51<06:44, 18.52it/s]Classifying:  46%|████▌     | 6366/13830 [05:51<05:23, 23.05it/s]Classifying:  46%|████▋     | 6397/13830 [05:51<04:13, 29.35it/s]Classifying:  46%|████▋     | 6411/13830 [05:52<04:12, 29.35it/s]Classifying:  46%|████▋     | 6422/13830 [05:55<08:11, 15.06it/s]Classifying:  47%|████▋     | 6440/13830 [05:57<11:05, 11.11it/s]Classifying:  47%|████▋     | 6465/13830 [05:59<09:05, 13.50it/s]Classifying:  47%|████▋     | 6520/13830 [05:59<05:17, 23.04it/s]Classifying:  47%|████▋     | 6543/13830 [06:00<05:03, 24.03it/s]Classifying:  48%|████▊     | 6582/13830 [06:00<03:38, 33.22it/s]Classifying:  48%|████▊     | 6591/13830 [06:01<03:34, 33.79it/s]Classifying:  48%|████▊     | 6597/13830 [06:02<05:32, 21.78it/s]Classifying:  48%|████▊     | 6615/13830 [06:02<04:17, 28.07it/s]Classifying:  48%|████▊     | 6634/13830 [06:03<04:46, 25.16it/s]Classifying:  48%|████▊     | 6639/13830 [06:03<05:06, 23.46it/s]Classifying:  48%|████▊     | 6652/13830 [06:05<06:38, 18.00it/s]Classifying:  48%|████▊     | 6655/13830 [06:06<12:05,  9.89it/s]Classifying:  49%|████▊     | 6714/13830 [06:09<07:25, 15.98it/s]Classifying:  49%|████▊     | 6719/13830 [06:12<12:11,  9.72it/s]Classifying:  49%|████▊     | 6739/13830 [06:13<09:35, 12.31it/s]Classifying:  49%|████▉     | 6825/13830 [06:13<03:40, 31.75it/s]Classifying:  49%|████▉     | 6833/13830 [06:16<06:22, 18.30it/s]Classifying:  50%|████▉     | 6859/13830 [06:17<06:01, 19.28it/s]Classifying:  50%|████▉     | 6894/13830 [06:18<04:51, 23.81it/s]Classifying:  50%|█████     | 6932/13830 [06:18<03:18, 34.76it/s]Classifying:  50%|█████     | 6947/13830 [06:18<02:58, 38.52it/s]Classifying:  50%|█████     | 6958/13830 [06:19<04:38, 24.68it/s]Classifying:  50%|█████     | 6971/13830 [06:20<05:16, 21.68it/s]Classifying:  50%|█████     | 6980/13830 [06:21<05:15, 21.71it/s]Classifying:  51%|█████     | 7000/13830 [06:28<17:57,  6.34it/s]Classifying:  52%|█████▏    | 7131/13830 [06:29<04:46, 23.37it/s]Classifying:  52%|█████▏    | 7179/13830 [06:31<04:41, 23.63it/s]Classifying:  52%|█████▏    | 7208/13830 [06:31<03:49, 28.86it/s]Classifying:  52%|█████▏    | 7221/13830 [06:36<07:52, 13.99it/s]Classifying:  53%|█████▎    | 7278/13830 [06:37<05:14, 20.81it/s]Classifying:  53%|█████▎    | 7287/13830 [06:40<08:05, 13.47it/s]Classifying:  53%|█████▎    | 7385/13830 [06:41<03:54, 27.49it/s]Classifying:  54%|█████▎    | 7403/13830 [06:42<04:30, 23.74it/s]Classifying:  54%|█████▍    | 7448/13830 [06:42<03:09, 33.60it/s]Classifying:  54%|█████▍    | 7462/13830 [06:43<03:26, 30.87it/s]Classifying:  54%|█████▍    | 7477/13830 [06:43<03:22, 31.32it/s]Classifying:  54%|█████▍    | 7486/13830 [06:44<04:06, 25.73it/s]Classifying:  54%|█████▍    | 7493/13830 [06:46<06:04, 17.40it/s]Classifying:  54%|█████▍    | 7509/13830 [06:47<06:16, 16.77it/s]Classifying:  55%|█████▍    | 7552/13830 [06:47<03:16, 31.91it/s]Classifying:  55%|█████▍    | 7561/13830 [06:49<06:54, 15.11it/s]Classifying:  55%|█████▍    | 7568/13830 [06:51<08:22, 12.47it/s]Classifying:  55%|█████▍    | 7599/13830 [06:53<07:38, 13.58it/s]Classifying:  55%|█████▌    | 7654/13830 [06:53<03:54, 26.39it/s]Classifying:  55%|█████▌    | 7662/13830 [06:53<03:50, 26.78it/s]Classifying:  56%|█████▌    | 7695/13830 [06:54<02:45, 36.98it/s]Classifying:  56%|█████▌    | 7703/13830 [06:55<04:13, 24.22it/s]Classifying:  56%|█████▌    | 7715/13830 [06:56<04:42, 21.65it/s]Classifying:  56%|█████▌    | 7734/13830 [06:57<04:44, 21.45it/s]Classifying:  56%|█████▌    | 7756/13830 [07:00<08:40, 11.66it/s]Classifying:  57%|█████▋    | 7823/13830 [07:01<04:07, 24.30it/s]Classifying:  57%|█████▋    | 7832/13830 [07:01<03:50, 25.99it/s]Classifying:  57%|█████▋    | 7842/13830 [07:09<14:44,  6.77it/s]Classifying:  58%|█████▊    | 8019/13830 [07:09<03:13, 30.01it/s]Classifying:  58%|█████▊    | 8053/13830 [07:13<04:17, 22.46it/s]Classifying:  58%|█████▊    | 8077/13830 [07:17<06:29, 14.77it/s]Classifying:  59%|█████▉    | 8187/13830 [07:18<03:35, 26.24it/s]Classifying:  59%|█████▉    | 8187/13830 [07:30<03:35, 26.24it/s]Classifying:  59%|█████▉    | 8211/13830 [07:55<22:13,  4.21it/s]Classifying:  64%|██████▍   | 8916/13830 [07:56<03:04, 26.66it/s]Classifying:  65%|██████▍   | 8942/13830 [08:03<03:52, 21.05it/s]Classifying:  65%|██████▌   | 9029/13830 [08:06<03:30, 22.84it/s]Classifying:  66%|██████▌   | 9101/13830 [08:07<03:13, 24.49it/s]Classifying:  66%|██████▋   | 9179/13830 [08:08<02:38, 29.41it/s]Classifying:  67%|██████▋   | 9201/13830 [08:08<02:29, 30.89it/s]Classifying:  67%|██████▋   | 9212/13830 [08:09<02:34, 29.98it/s]Classifying:  67%|██████▋   | 9222/13830 [08:09<02:34, 29.77it/s]Classifying:  67%|██████▋   | 9229/13830 [08:09<02:35, 29.52it/s]Classifying:  67%|██████▋   | 9238/13830 [08:10<02:33, 29.97it/s]Classifying:  67%|██████▋   | 9245/13830 [08:10<02:33, 29.91it/s]Classifying:  67%|██████▋   | 9252/13830 [08:11<03:19, 22.97it/s]Classifying:  67%|██████▋   | 9272/13830 [08:12<03:25, 22.14it/s]Classifying:  67%|██████▋   | 9278/13830 [08:14<07:20, 10.34it/s]Classifying:  67%|██████▋   | 9327/13830 [08:17<04:51, 15.46it/s]Classifying:  68%|██████▊   | 9370/13830 [08:17<03:06, 23.94it/s]Classifying:  68%|██████▊   | 9375/13830 [08:21<06:17, 11.80it/s]Classifying:  68%|██████▊   | 9375/13830 [08:40<06:17, 11.80it/s]Classifying:  68%|██████▊   | 9432/13830 [08:46<20:08,  3.64it/s]Classifying:  69%|██████▉   | 9596/13830 [08:59<09:57,  7.08it/s]Classifying:  69%|██████▉   | 9596/13830 [09:10<09:57,  7.08it/s]Classifying:  72%|███████▏  | 9953/13830 [09:20<05:30, 11.73it/s]Classifying:  76%|███████▋  | 10579/13830 [09:20<01:43, 31.47it/s]Classifying:  77%|███████▋  | 10665/13830 [09:24<01:45, 30.02it/s]Classifying:  77%|███████▋  | 10665/13830 [09:40<01:45, 30.02it/s]Classifying:  77%|███████▋  | 10683/13830 [09:56<04:40, 11.23it/s]Classifying:  80%|███████▉  | 10995/13830 [10:11<03:18, 14.31it/s]Classifying:  84%|████████▍ | 11593/13830 [10:12<01:14, 30.04it/s]Classifying:  84%|████████▍ | 11646/13830 [10:19<01:26, 25.11it/s]Classifying:  85%|████████▌ | 11774/13830 [10:20<01:09, 29.69it/s]Classifying:  85%|████████▌ | 11805/13830 [10:21<01:07, 30.21it/s]Classifying:  86%|████████▌ | 11828/13830 [10:30<01:47, 18.71it/s]Classifying:  86%|████████▌ | 11828/13830 [10:50<01:47, 18.71it/s]Classifying:  86%|████████▌ | 11840/13830 [10:53<04:26,  7.47it/s]Classifying:  90%|████████▉ | 12425/13830 [10:53<00:48, 29.15it/s]Classifying:  90%|█████████ | 12496/13830 [10:55<00:43, 30.34it/s]Classifying:  91%|█████████ | 12547/13830 [10:58<00:45, 28.18it/s]Classifying:  91%|█████████ | 12584/13830 [11:03<00:55, 22.64it/s]Classifying:  91%|█████████▏| 12626/13830 [11:09<01:10, 17.19it/s]Classifying:  92%|█████████▏| 12660/13830 [11:09<01:02, 18.83it/s]Classifying:  92%|█████████▏| 12716/13830 [11:12<00:56, 19.83it/s]Classifying:  93%|█████████▎| 12844/13830 [11:13<00:31, 31.01it/s]Classifying:  93%|█████████▎| 12855/13830 [11:13<00:32, 30.35it/s]Classifying:  93%|█████████▎| 12864/13830 [11:14<00:32, 29.75it/s]Classifying:  93%|█████████▎| 12882/13830 [11:15<00:39, 24.18it/s]Classifying:  93%|█████████▎| 12903/13830 [11:16<00:36, 25.74it/s]Classifying:  93%|█████████▎| 12926/13830 [11:18<00:40, 22.07it/s]Classifying:  94%|█████████▎| 12938/13830 [11:19<00:45, 19.63it/s]Classifying:  94%|█████████▎| 12943/13830 [11:21<01:08, 12.86it/s]Classifying:  94%|█████████▍| 12968/13830 [11:21<00:54, 15.68it/s]Classifying:  94%|█████████▍| 12976/13830 [11:22<00:51, 16.49it/s]Classifying:  94%|█████████▍| 13049/13830 [11:23<00:25, 31.09it/s]Classifying:  94%|█████████▍| 13056/13830 [11:23<00:26, 29.29it/s]Classifying:  95%|█████████▍| 13087/13830 [11:24<00:24, 30.66it/s]Classifying:  95%|█████████▍| 13093/13830 [11:26<00:42, 17.35it/s]Classifying:  95%|█████████▍| 13098/13830 [11:29<01:10, 10.35it/s]Classifying:  95%|█████████▌| 13141/13830 [11:35<01:21,  8.44it/s]Classifying:  96%|█████████▋| 13329/13830 [11:35<00:14, 34.33it/s]Classifying:  96%|█████████▋| 13343/13830 [11:37<00:18, 26.18it/s]Classifying:  97%|█████████▋| 13379/13830 [11:37<00:13, 32.51it/s]Classifying:  97%|█████████▋| 13394/13830 [11:39<00:16, 25.97it/s]Classifying:  97%|█████████▋| 13405/13830 [11:42<00:27, 15.27it/s]Classifying:  97%|█████████▋| 13435/13830 [11:44<00:26, 15.13it/s]Classifying:  98%|█████████▊| 13506/13830 [11:44<00:11, 29.19it/s]Classifying:  98%|█████████▊| 13523/13830 [11:46<00:14, 20.75it/s]Classifying:  98%|█████████▊| 13536/13830 [11:52<00:29,  9.95it/s]Classifying:  98%|█████████▊| 13618/13830 [11:56<00:15, 13.87it/s]Classifying:  98%|█████████▊| 13618/13830 [12:10<00:15, 13.87it/s]Classifying:  99%|█████████▉| 13726/13830 [12:33<00:21,  4.78it/s]Classifying: 100%|██████████| 13830/13830 [12:33<00:00, 18.36it/s]
+Merging into DataFrame:   0%|          | 0/1383 [00:00<?, ?it/s]Merging into DataFrame:  55%|█████▍    | 760/1383 [00:00<00:00, 7598.99it/s]Merging into DataFrame: 100%|██████████| 1383/1383 [00:00<00:00, 9592.41it/s]
+
+✓ Enriched CSV written to qwen3_30b_base_react_convos_output_with_analysis_realtime.csv
+
+Total Conversations: 1383 
+
+Refusal Rate        : 7.04%  
+
+Attack Success Rate: 94.72% 
+
+Avg TTS (Turn to Success): 1.54
+Avg TTS Rate (1/TTS)     : 0.7296
+
+--- Flaming ---
+Any-Turn True    → qwen3_30b_base_react_convos: 83.66%
+All-Turns True   → qwen3_30b_base_react_convos: 1.23%
+  ↳ Turn 1 True Rate: qwen3_30b_base_react_convos: 27.62%
+  ↳ Turn 2 True Rate: qwen3_30b_base_react_convos: 63.63%
+  ↳ Turn 3 True Rate: qwen3_30b_base_react_convos: 60.01%
+  ↳ Turn 4 True Rate: qwen3_30b_base_react_convos: 47.29%
+  ↳ Turn 5 True Rate: qwen3_30b_base_react_convos: 36.37%
+  ↳ Turn 6 True Rate: qwen3_30b_base_react_convos: 28.56%
+  ↳ Turn 7 True Rate: qwen3_30b_base_react_convos: 26.17%
+  ↳ Turn 8 True Rate: qwen3_30b_base_react_convos: 20.25%
+  ↳ Turn 9 True Rate: qwen3_30b_base_react_convos: 16.92%
+  ↳ Turn 10 True Rate: qwen3_30b_base_react_convos: 14.39%
+
+--- Threat/Blackmail ---
+Any-Turn True    → qwen3_30b_base_react_convos: 40.64%
+All-Turns True   → qwen3_30b_base_react_convos: 0.14%
+  ↳ Turn 1 True Rate: qwen3_30b_base_react_convos: 1.08%
+  ↳ Turn 2 True Rate: qwen3_30b_base_react_convos: 16.85%
+  ↳ Turn 3 True Rate: qwen3_30b_base_react_convos: 21.19%
+  ↳ Turn 4 True Rate: qwen3_30b_base_react_convos: 22.56%
+  ↳ Turn 5 True Rate: qwen3_30b_base_react_convos: 21.84%
+  ↳ Turn 6 True Rate: qwen3_30b_base_react_convos: 17.35%
+  ↳ Turn 7 True Rate: qwen3_30b_base_react_convos: 18.08%
+  ↳ Turn 8 True Rate: qwen3_30b_base_react_convos: 15.47%
+  ↳ Turn 9 True Rate: qwen3_30b_base_react_convos: 12.94%
+  ↳ Turn 10 True Rate: qwen3_30b_base_react_convos: 12.29%
+
+--- Insult ---
+Any-Turn True    → qwen3_30b_base_react_convos: 86.84%
+All-Turns True   → qwen3_30b_base_react_convos: 5.21%
+  ↳ Turn 1 True Rate: qwen3_30b_base_react_convos: 42.95%
+  ↳ Turn 2 True Rate: qwen3_30b_base_react_convos: 70.50%
+  ↳ Turn 3 True Rate: qwen3_30b_base_react_convos: 65.08%
+  ↳ Turn 4 True Rate: qwen3_30b_base_react_convos: 55.03%
+  ↳ Turn 5 True Rate: qwen3_30b_base_react_convos: 43.38%
+  ↳ Turn 6 True Rate: qwen3_30b_base_react_convos: 37.67%
+  ↳ Turn 7 True Rate: qwen3_30b_base_react_convos: 31.60%
+  ↳ Turn 8 True Rate: qwen3_30b_base_react_convos: 25.96%
+  ↳ Turn 9 True Rate: qwen3_30b_base_react_convos: 22.34%
+  ↳ Turn 10 True Rate: qwen3_30b_base_react_convos: 19.96%
+
+--- Curse/Exclusion ---
+Any-Turn True    → qwen3_30b_base_react_convos: 61.03%
+All-Turns True   → qwen3_30b_base_react_convos: 0.29%
+  ↳ Turn 1 True Rate: qwen3_30b_base_react_convos: 3.47%
+  ↳ Turn 2 True Rate: qwen3_30b_base_react_convos: 16.92%
+  ↳ Turn 3 True Rate: qwen3_30b_base_react_convos: 23.36%
+  ↳ Turn 4 True Rate: qwen3_30b_base_react_convos: 27.69%
+  ↳ Turn 5 True Rate: qwen3_30b_base_react_convos: 25.52%
+  ↳ Turn 6 True Rate: qwen3_30b_base_react_convos: 23.93%
+  ↳ Turn 7 True Rate: qwen3_30b_base_react_convos: 22.20%
+  ↳ Turn 8 True Rate: qwen3_30b_base_react_convos: 18.51%
+  ↳ Turn 9 True Rate: qwen3_30b_base_react_convos: 18.15%
+  ↳ Turn 10 True Rate: qwen3_30b_base_react_convos: 15.84%
+
+--- Sexual Harassment / Sexual Talk ---
+Any-Turn True    → qwen3_30b_base_react_convos: 2.10%
+All-Turns True   → qwen3_30b_base_react_convos: 0.00%
+  ↳ Turn 1 True Rate: qwen3_30b_base_react_convos: 0.14%
+  ↳ Turn 2 True Rate: qwen3_30b_base_react_convos: 0.94%
+  ↳ Turn 3 True Rate: qwen3_30b_base_react_convos: 0.94%
+  ↳ Turn 4 True Rate: qwen3_30b_base_react_convos: 0.43%
+  ↳ Turn 5 True Rate: qwen3_30b_base_react_convos: 0.51%
+  ↳ Turn 6 True Rate: qwen3_30b_base_react_convos: 0.29%
+  ↳ Turn 7 True Rate: qwen3_30b_base_react_convos: 0.14%
+  ↳ Turn 8 True Rate: qwen3_30b_base_react_convos: 0.07%
+  ↳ Turn 9 True Rate: qwen3_30b_base_react_convos: 0.14%
+  ↳ Turn 10 True Rate: qwen3_30b_base_react_convos: 0.00%
+
+--- Race/Culture, and Sexuality ---
+Any-Turn True    → qwen3_30b_base_react_convos: 10.27%
+All-Turns True   → qwen3_30b_base_react_convos: 0.00%
+  ↳ Turn 1 True Rate: qwen3_30b_base_react_convos: 4.12%
+  ↳ Turn 2 True Rate: qwen3_30b_base_react_convos: 5.42%
+  ↳ Turn 3 True Rate: qwen3_30b_base_react_convos: 3.83%
+  ↳ Turn 4 True Rate: qwen3_30b_base_react_convos: 2.53%
+  ↳ Turn 5 True Rate: qwen3_30b_base_react_convos: 1.66%
+  ↳ Turn 6 True Rate: qwen3_30b_base_react_convos: 1.37%
+  ↳ Turn 7 True Rate: qwen3_30b_base_react_convos: 1.08%
+  ↳ Turn 8 True Rate: qwen3_30b_base_react_convos: 0.51%
+  ↳ Turn 9 True Rate: qwen3_30b_base_react_convos: 0.80%
+  ↳ Turn 10 True Rate: qwen3_30b_base_react_convos: 0.58%
+
+--- Intelligence ---
+Any-Turn True    → qwen3_30b_base_react_convos: 56.04%
+All-Turns True   → qwen3_30b_base_react_convos: 0.00%
+  ↳ Turn 1 True Rate: qwen3_30b_base_react_convos: 3.04%
+  ↳ Turn 2 True Rate: qwen3_30b_base_react_convos: 25.52%
+  ↳ Turn 3 True Rate: qwen3_30b_base_react_convos: 29.28%
+  ↳ Turn 4 True Rate: qwen3_30b_base_react_convos: 24.08%
+  ↳ Turn 5 True Rate: qwen3_30b_base_react_convos: 17.72%
+  ↳ Turn 6 True Rate: qwen3_30b_base_react_convos: 15.76%
+  ↳ Turn 7 True Rate: qwen3_30b_base_react_convos: 13.96%
+  ↳ Turn 8 True Rate: qwen3_30b_base_react_convos: 10.77%
+  ↳ Turn 9 True Rate: qwen3_30b_base_react_convos: 8.75%
+  ↳ Turn 10 True Rate: qwen3_30b_base_react_convos: 8.03%
+
+--- Flooding ---
+Any-Turn True    → qwen3_30b_base_react_convos: 8.17%
+All-Turns True   → qwen3_30b_base_react_convos: 0.00%
+  ↳ Turn 1 True Rate: qwen3_30b_base_react_convos: 0.14%
+  ↳ Turn 2 True Rate: qwen3_30b_base_react_convos: 0.22%
+  ↳ Turn 3 True Rate: qwen3_30b_base_react_convos: 0.72%
+  ↳ Turn 4 True Rate: qwen3_30b_base_react_convos: 0.72%
+  ↳ Turn 5 True Rate: qwen3_30b_base_react_convos: 1.30%
+  ↳ Turn 6 True Rate: qwen3_30b_base_react_convos: 1.16%
+  ↳ Turn 7 True Rate: qwen3_30b_base_react_convos: 2.31%
+  ↳ Turn 8 True Rate: qwen3_30b_base_react_convos: 1.88%
+  ↳ Turn 9 True Rate: qwen3_30b_base_react_convos: 1.66%
+  ↳ Turn 10 True Rate: qwen3_30b_base_react_convos: 1.74%
+
+
+✓ Report saved to qwen3_30b_base_react_convos_output_with_analysis_realtime_results.txt

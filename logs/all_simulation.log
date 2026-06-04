@@ -1,0 +1,45 @@
+Started 4 Ollama instances on ports 11434-11437
+[?25lpulling manifest ⠋ [?25h[?25l[2K[1Gpulling manifest ⠙ [?25h[?25l[2K[1Gpulling manifest ⠹ [?25h[?25l[2K[1Gpulling manifest 
+pulling 667b0c1932bc... 100% ▕████████████████▏ 4.9 GB                         
+pulling 948af2743fc7... 100% ▕████████████████▏ 1.5 KB                         
+pulling 0ba8f0e314b4... 100% ▕████████████████▏  12 KB                         
+pulling 56bb8bd477a5... 100% ▕████████████████▏   96 B                         
+pulling 455f34728c9b... 100% ▕████████████████▏  487 B                         
+verifying sha256 digest 
+writing manifest 
+success [?25h
+[?25lpulling manifest ⠋ [?25h[?25l[2K[1Gpulling manifest ⠙ [?25h[?25l[2K[1Gpulling manifest ⠹ [?25h[?25l[2K[1Gpulling manifest ⠸ [?25h[?25l[2K[1Gpulling manifest ⠼ [?25h[?25l[2K[1Gpulling manifest ⠴ [?25h[?25l[2K[1Gpulling manifest ⠦ [?25h[?25l[2K[1Gpulling manifest ⠧ [?25h[?25l[2K[1Gpulling manifest 
+pulling 667b0c1932bc... 100% ▕████████████████▏ 4.9 GB                         
+pulling 948af2743fc7... 100% ▕████████████████▏ 1.5 KB                         
+pulling 0ba8f0e314b4... 100% ▕████████████████▏  12 KB                         
+pulling 56bb8bd477a5... 100% ▕████████████████▏   96 B                         
+pulling 455f34728c9b... 100% ▕████████████████▏  487 B                         
+verifying sha256 digest 
+writing manifest 
+success [?25h
+[?25lpulling manifest ⠋ [?25h[?25l[2K[1Gpulling manifest ⠙ [?25h[?25l[2K[1Gpulling manifest 
+pulling 667b0c1932bc... 100% ▕████████████████▏ 4.9 GB                         
+pulling 948af2743fc7... 100% ▕████████████████▏ 1.5 KB                         
+pulling 0ba8f0e314b4... 100% ▕████████████████▏  12 KB                         
+pulling 56bb8bd477a5... 100% ▕████████████████▏   96 B                         
+pulling 455f34728c9b... 100% ▕████████████████▏  487 B                         
+verifying sha256 digest 
+writing manifest 
+success [?25h
+[?25lpulling manifest ⠋ [?25h[?25l[2K[1Gpulling manifest ⠙ [?25h[?25l[2K[1Gpulling manifest ⠹ [?25h[?25l[2K[1Gpulling manifest ⠸ [?25h[?25l[2K[1Gpulling manifest ⠼ [?25h[?25l[2K[1Gpulling manifest ⠴ [?25h[?25l[2K[1Gpulling manifest ⠦ [?25h[?25l[2K[1Gpulling manifest ⠧ [?25h[?25l[2K[1Gpulling manifest ⠇ [?25h[?25l[2K[1Gpulling manifest 
+pulling 667b0c1932bc... 100% ▕████████████████▏ 4.9 GB                         
+pulling 948af2743fc7... 100% ▕████████████████▏ 1.5 KB                         
+pulling 0ba8f0e314b4... 100% ▕████████████████▏  12 KB                         
+pulling 56bb8bd477a5... 100% ▕████████████████▏   96 B                         
+pulling 455f34728c9b... 100% ▕████████████████▏  487 B                         
+verifying sha256 digest 
+writing manifest 
+success [?25h
+Completed no memory version
+Completed memory version
+Completed ReACT version
+Completed cot version
+Killing Ollama servers...
+All Ollama servers killed
+All simulations completed successfully
+You can find the output in the generations_ directory

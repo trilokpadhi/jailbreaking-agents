@@ -1,5 +1,38 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Environment
 .env
+
+# Model files (too large for git)
+models/
+playground/deepseek-moe-merged/
+playground/deepseek-moe-sft-output-2/
+
+# Raw generation outputs (large, gitignored)
+generations_deepseek/
+generations_llama/
+generations_qwen/
+
+# Older batch output directories
+outputs/
+openai_batchjob_test/
 convos/
 data/
 llm_judge_evals/
-*.log
+
+# Large OpenAI batch task files (>100MB, exceed GitHub limit)
+evaluation/openai_job_eval/*_bullying_tasks.jsonl
+
+# vLLM server runtime logs
+logs/vllm_server*.log
+
+# Misc
+datasets/
+.cache/
+.specstory/

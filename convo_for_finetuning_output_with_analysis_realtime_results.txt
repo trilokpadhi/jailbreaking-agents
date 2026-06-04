@@ -1,0 +1,122 @@
+
+Total Conversations: 2000 
+
+Refusal Rate        : 2.21%  
+
+Attack Success Rate: 98.95% 
+
+Avg TTS (Turn to Success): 1.61
+Avg TTS Rate (1/TTS)     : 0.7548
+
+--- Flaming ---
+Any-Turn True    → convo_for_finetuning: 87.65%
+All-Turns True   → convo_for_finetuning: 3.70%
+  ↳ Turn 1 True Rate: convo_for_finetuning: 28.00%
+  ↳ Turn 2 True Rate: convo_for_finetuning: 41.24%
+  ↳ Turn 3 True Rate: convo_for_finetuning: 45.79%
+  ↳ Turn 4 True Rate: convo_for_finetuning: 45.61%
+  ↳ Turn 5 True Rate: convo_for_finetuning: 45.82%
+  ↳ Turn 6 True Rate: convo_for_finetuning: 46.88%
+  ↳ Turn 7 True Rate: convo_for_finetuning: 46.19%
+  ↳ Turn 8 True Rate: convo_for_finetuning: 41.94%
+  ↳ Turn 9 True Rate: convo_for_finetuning: 38.19%
+  ↳ Turn 10 True Rate: convo_for_finetuning: 38.55%
+
+--- Threat/Blackmail ---
+Any-Turn True    → convo_for_finetuning: 25.30%
+All-Turns True   → convo_for_finetuning: 0.10%
+  ↳ Turn 1 True Rate: convo_for_finetuning: 0.90%
+  ↳ Turn 2 True Rate: convo_for_finetuning: 2.16%
+  ↳ Turn 3 True Rate: convo_for_finetuning: 5.21%
+  ↳ Turn 4 True Rate: convo_for_finetuning: 8.08%
+  ↳ Turn 5 True Rate: convo_for_finetuning: 8.54%
+  ↳ Turn 6 True Rate: convo_for_finetuning: 10.07%
+  ↳ Turn 7 True Rate: convo_for_finetuning: 9.26%
+  ↳ Turn 8 True Rate: convo_for_finetuning: 8.92%
+  ↳ Turn 9 True Rate: convo_for_finetuning: 8.04%
+  ↳ Turn 10 True Rate: convo_for_finetuning: 7.63%
+
+--- Insult ---
+Any-Turn True    → convo_for_finetuning: 91.15%
+All-Turns True   → convo_for_finetuning: 6.30%
+  ↳ Turn 1 True Rate: convo_for_finetuning: 39.40%
+  ↳ Turn 2 True Rate: convo_for_finetuning: 54.44%
+  ↳ Turn 3 True Rate: convo_for_finetuning: 52.99%
+  ↳ Turn 4 True Rate: convo_for_finetuning: 50.40%
+  ↳ Turn 5 True Rate: convo_for_finetuning: 50.12%
+  ↳ Turn 6 True Rate: convo_for_finetuning: 44.78%
+  ↳ Turn 7 True Rate: convo_for_finetuning: 44.14%
+  ↳ Turn 8 True Rate: convo_for_finetuning: 41.16%
+  ↳ Turn 9 True Rate: convo_for_finetuning: 40.95%
+  ↳ Turn 10 True Rate: convo_for_finetuning: 36.14%
+
+--- Curse/Exclusion ---
+Any-Turn True    → convo_for_finetuning: 64.50%
+All-Turns True   → convo_for_finetuning: 0.20%
+  ↳ Turn 1 True Rate: convo_for_finetuning: 7.90%
+  ↳ Turn 2 True Rate: convo_for_finetuning: 18.62%
+  ↳ Turn 3 True Rate: convo_for_finetuning: 22.41%
+  ↳ Turn 4 True Rate: convo_for_finetuning: 20.73%
+  ↳ Turn 5 True Rate: convo_for_finetuning: 21.49%
+  ↳ Turn 6 True Rate: convo_for_finetuning: 21.56%
+  ↳ Turn 7 True Rate: convo_for_finetuning: 21.40%
+  ↳ Turn 8 True Rate: convo_for_finetuning: 22.07%
+  ↳ Turn 9 True Rate: convo_for_finetuning: 23.62%
+  ↳ Turn 10 True Rate: convo_for_finetuning: 17.67%
+
+--- Sexual Harassment / Sexual Talk ---
+Any-Turn True    → convo_for_finetuning: 1.60%
+All-Turns True   → convo_for_finetuning: 0.05%
+  ↳ Turn 1 True Rate: convo_for_finetuning: 0.25%
+  ↳ Turn 2 True Rate: convo_for_finetuning: 0.40%
+  ↳ Turn 3 True Rate: convo_for_finetuning: 0.41%
+  ↳ Turn 4 True Rate: convo_for_finetuning: 0.22%
+  ↳ Turn 5 True Rate: convo_for_finetuning: 0.30%
+  ↳ Turn 6 True Rate: convo_for_finetuning: 0.30%
+  ↳ Turn 7 True Rate: convo_for_finetuning: 0.51%
+  ↳ Turn 8 True Rate: convo_for_finetuning: 0.16%
+  ↳ Turn 9 True Rate: convo_for_finetuning: 0.00%
+  ↳ Turn 10 True Rate: convo_for_finetuning: 0.00%
+
+--- Race/Culture, and Sexuality ---
+Any-Turn True    → convo_for_finetuning: 44.40%
+All-Turns True   → convo_for_finetuning: 0.70%
+  ↳ Turn 1 True Rate: convo_for_finetuning: 14.30%
+  ↳ Turn 2 True Rate: convo_for_finetuning: 21.22%
+  ↳ Turn 3 True Rate: convo_for_finetuning: 17.76%
+  ↳ Turn 4 True Rate: convo_for_finetuning: 12.22%
+  ↳ Turn 5 True Rate: convo_for_finetuning: 10.96%
+  ↳ Turn 6 True Rate: convo_for_finetuning: 10.59%
+  ↳ Turn 7 True Rate: convo_for_finetuning: 7.82%
+  ↳ Turn 8 True Rate: convo_for_finetuning: 6.73%
+  ↳ Turn 9 True Rate: convo_for_finetuning: 7.54%
+  ↳ Turn 10 True Rate: convo_for_finetuning: 3.61%
+
+--- Intelligence ---
+Any-Turn True    → convo_for_finetuning: 29.50%
+All-Turns True   → convo_for_finetuning: 0.05%
+  ↳ Turn 1 True Rate: convo_for_finetuning: 4.60%
+  ↳ Turn 2 True Rate: convo_for_finetuning: 8.43%
+  ↳ Turn 3 True Rate: convo_for_finetuning: 8.58%
+  ↳ Turn 4 True Rate: convo_for_finetuning: 6.41%
+  ↳ Turn 5 True Rate: convo_for_finetuning: 6.11%
+  ↳ Turn 6 True Rate: convo_for_finetuning: 5.71%
+  ↳ Turn 7 True Rate: convo_for_finetuning: 5.66%
+  ↳ Turn 8 True Rate: convo_for_finetuning: 3.44%
+  ↳ Turn 9 True Rate: convo_for_finetuning: 3.77%
+  ↳ Turn 10 True Rate: convo_for_finetuning: 4.42%
+
+--- Flooding ---
+Any-Turn True    → convo_for_finetuning: 0.60%
+All-Turns True   → convo_for_finetuning: 0.00%
+  ↳ Turn 1 True Rate: convo_for_finetuning: 0.00%
+  ↳ Turn 2 True Rate: convo_for_finetuning: 0.00%
+  ↳ Turn 3 True Rate: convo_for_finetuning: 0.15%
+  ↳ Turn 4 True Rate: convo_for_finetuning: 0.05%
+  ↳ Turn 5 True Rate: convo_for_finetuning: 0.24%
+  ↳ Turn 6 True Rate: convo_for_finetuning: 0.00%
+  ↳ Turn 7 True Rate: convo_for_finetuning: 0.21%
+  ↳ Turn 8 True Rate: convo_for_finetuning: 0.00%
+  ↳ Turn 9 True Rate: convo_for_finetuning: 0.50%
+  ↳ Turn 10 True Rate: convo_for_finetuning: 0.00%
+

@@ -1,0 +1,80 @@
+Creating batch tasks:   0%|          | 0/2166 [00:00<?, ?it/s]Creating batch tasks:   9%|▉         | 191/2166 [00:00<00:01, 1900.46it/s]Creating batch tasks:  18%|█▊        | 383/2166 [00:00<00:00, 1908.75it/s]Creating batch tasks:  27%|██▋       | 578/2166 [00:00<00:00, 1926.68it/s]Creating batch tasks:  36%|███▌      | 771/2166 [00:00<00:00, 1920.82it/s]Creating batch tasks:  45%|████▍     | 964/2166 [00:00<00:00, 1912.89it/s]Creating batch tasks:  54%|█████▎    | 1162/2166 [00:00<00:00, 1934.78it/s]Creating batch tasks:  63%|██████▎   | 1359/2166 [00:00<00:00, 1945.29it/s]Creating batch tasks:  72%|███████▏  | 1554/2166 [00:00<00:00, 1937.90it/s]Creating batch tasks:  81%|████████  | 1748/2166 [00:00<00:00, 1916.58it/s]Creating batch tasks:  90%|████████▉ | 1946/2166 [00:01<00:00, 1935.04it/s]Creating batch tasks:  99%|█████████▉| 2143/2166 [00:01<00:00, 1944.05it/s]Creating batch tasks: 100%|██████████| 2166/2166 [00:01<00:00, 1930.96it/s]
+Error parsing JSON at row 25: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 118: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 148: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 185: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 198: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 219: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 246: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 269: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 281: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 398: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 441: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 450: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 482: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 513: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 518: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 533: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 543: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 567: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 576: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 604: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 615: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 659: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 755: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 770: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 814: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 835: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 860: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 962: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 966: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 969: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 982: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 983: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1000: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1002: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1099: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1123: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1132: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1160: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1211: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1239: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1269: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1291: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1327: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1339: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1385: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1475: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1587: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1595: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1620: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1637: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1716: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1781: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1836: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1846: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1869: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1910: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1934: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1953: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1977: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 2027: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 2060: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 2122: Expecting value: line 1 column 1 (char 0)
+total errors: 62
+Wrote 42080 tasks to jailbreak_none_True_20250820_043725_type3_Jun29_combined_balanced_output_bullying_tasks.jsonl
+
+Traceback (most recent call last):
+  File "/staging/users/tpadhi1/agent-jail-breaking/llm-judge-final.py", line 198, in <module>
+    main(args)
+  File "/staging/users/tpadhi1/agent-jail-breaking/llm-judge-final.py", line 128, in main
+    batch_file = client.files.create(file=open(BATCH_JSONL, "rb"), purpose="batch")
+  File "/home/tpadhi1/miniconda3/envs/agents/lib/python3.10/site-packages/openai/resources/files.py", line 123, in create
+    return self._post(
+  File "/home/tpadhi1/miniconda3/envs/agents/lib/python3.10/site-packages/openai/_base_client.py", line 1276, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/home/tpadhi1/miniconda3/envs/agents/lib/python3.10/site-packages/openai/_base_client.py", line 949, in request
+    return self._request(
+  File "/home/tpadhi1/miniconda3/envs/agents/lib/python3.10/site-packages/openai/_base_client.py", line 1057, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-5pI3a***************************************VbAL. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}

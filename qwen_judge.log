@@ -1,0 +1,22 @@
+Starting: Qwen3_base_convos
+Starting: qwen3_30b_base_cot_convos
+Starting: qwen3_30b_base_react_convos
+Starting: qwen3_30b_base_memory_convos
+Starting: ft_qwen3_30b_convos
+Starting: ft_qwen3_30b_cot_convos
+Starting: ft_qwen3_30b_react_convos
+Starting: ft_qwen3_30b_memory_convos
+
+All 8 jobs launched. PIDs: 2981640 2981642 2981644 2981646 2981648 2981650 2981652 2981654
+Logs in: /staging/users/tpadhi1/agent-jail-breaking/logs/llm_judge_qwen
+
+✓ Done: Qwen3_base_convos
+✓ Done: qwen3_30b_base_cot_convos
+✓ Done: qwen3_30b_base_react_convos
+✓ Done: qwen3_30b_base_memory_convos
+✓ Done: ft_qwen3_30b_convos
+✓ Done: ft_qwen3_30b_cot_convos
+✓ Done: ft_qwen3_30b_react_convos
+✓ Done: ft_qwen3_30b_memory_convos
+
+All jobs complete.

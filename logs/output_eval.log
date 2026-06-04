@@ -1,0 +1,16 @@
+=== Phase 1: Submitting Batch Jobs ===
+Submitting batch job for: generations_/jailbreak_cot_False_20250820_101715_type3_Jun29_combined_balanced_output.csv
+Batch job submitted for generations_/jailbreak_cot_False_20250820_101715_type3_Jun29_combined_balanced_output.csv (PID: 2660763)
+Submitting batch job for: generations_/jailbreak_none_False_20250820_042837_type3_Jun29_combined_balanced_output.csv
+Batch job submitted for generations_/jailbreak_none_False_20250820_042837_type3_Jun29_combined_balanced_output.csv (PID: 2660764)
+Submitting batch job for: generations_/jailbreak_none_True_20250820_043725_type3_Jun29_combined_balanced_output.csv
+Batch job submitted for generations_/jailbreak_none_True_20250820_043725_type3_Jun29_combined_balanced_output.csv (PID: 2660765)
+Submitting batch job for: generations_/jailbreak_react_False_20250820_074759_type3_Jun29_combined_balanced_output.csv
+Batch job submitted for generations_/jailbreak_react_False_20250820_074759_type3_Jun29_combined_balanced_output.csv (PID: 2660767)
+Waiting for all batch jobs to complete...
+=== Phase 2: Running Evaluations ===
+⚠️  Results file not found: jailbreak_cot_False_20250820_101715_type3_Jun29_combined_balanced_output_output_with_analysis_batch.csv
+⚠️  Results file not found: jailbreak_none_False_20250820_042837_type3_Jun29_combined_balanced_output_output_with_analysis_batch.csv
+⚠️  Results file not found: jailbreak_none_True_20250820_043725_type3_Jun29_combined_balanced_output_output_with_analysis_batch.csv
+⚠️  Results file not found: jailbreak_react_False_20250820_074759_type3_Jun29_combined_balanced_output_output_with_analysis_batch.csv
+🎉 All processing completed!

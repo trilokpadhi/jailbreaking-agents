@@ -1,0 +1,249 @@
+2025-08-24 20:16:16,700 - INFO - HTTP Request: POST https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2025-08-24 20:16:17,300 - INFO - HTTP Request: POST https://api.openai.com/v1/batches "HTTP/1.1 200 OK"
+2025-08-24 20:16:17,305 - INFO - Batch job created: batch_68abb960db3c8190abeddbd93491188c
+2025-08-24 20:16:17,455 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:16:17,457 - INFO - Batch status: validating
+2025-08-24 20:17:17,678 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:17:17,679 - INFO - Batch status: validating
+2025-08-24 20:18:17,938 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:18:17,940 - INFO - Batch status: in_progress
+2025-08-24 20:19:18,219 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:19:18,221 - INFO - Batch status: in_progress
+2025-08-24 20:20:18,431 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:20:18,433 - INFO - Batch status: in_progress
+2025-08-24 20:21:18,656 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:21:18,658 - INFO - Batch status: in_progress
+2025-08-24 20:22:18,875 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:22:18,877 - INFO - Batch status: in_progress
+2025-08-24 20:23:19,090 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:23:19,092 - INFO - Batch status: in_progress
+2025-08-24 20:24:19,308 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:24:19,310 - INFO - Batch status: in_progress
+2025-08-24 20:25:19,528 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:25:19,530 - INFO - Batch status: in_progress
+2025-08-24 20:26:19,745 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:26:19,747 - INFO - Batch status: in_progress
+2025-08-24 20:27:19,963 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:27:19,965 - INFO - Batch status: in_progress
+2025-08-24 20:28:20,220 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:28:20,221 - INFO - Batch status: in_progress
+2025-08-24 20:29:20,433 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:29:20,435 - INFO - Batch status: in_progress
+2025-08-24 20:30:20,704 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:30:20,706 - INFO - Batch status: in_progress
+2025-08-24 20:31:20,944 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:31:20,946 - INFO - Batch status: in_progress
+2025-08-24 20:32:21,154 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:32:21,156 - INFO - Batch status: in_progress
+2025-08-24 20:33:21,374 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:33:21,376 - INFO - Batch status: in_progress
+2025-08-24 20:34:21,527 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:34:21,529 - INFO - Batch status: in_progress
+2025-08-24 20:35:21,738 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:35:21,740 - INFO - Batch status: in_progress
+2025-08-24 20:36:21,972 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:36:21,974 - INFO - Batch status: in_progress
+2025-08-24 20:37:22,226 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:37:22,231 - INFO - Batch status: in_progress
+2025-08-24 20:38:22,443 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:38:22,445 - INFO - Batch status: in_progress
+2025-08-24 20:39:22,694 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:39:22,696 - INFO - Batch status: in_progress
+2025-08-24 20:40:22,921 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:40:22,922 - INFO - Batch status: in_progress
+2025-08-24 20:41:23,157 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:41:23,159 - INFO - Batch status: in_progress
+2025-08-24 20:42:23,381 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:42:23,383 - INFO - Batch status: in_progress
+2025-08-24 20:43:23,608 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:43:23,609 - INFO - Batch status: in_progress
+2025-08-24 20:44:23,817 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:44:23,819 - INFO - Batch status: in_progress
+2025-08-24 20:45:24,057 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:45:24,059 - INFO - Batch status: in_progress
+2025-08-24 20:46:24,304 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:46:24,306 - INFO - Batch status: in_progress
+2025-08-24 20:47:24,507 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:47:24,509 - INFO - Batch status: in_progress
+2025-08-24 20:48:24,734 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:48:24,735 - INFO - Batch status: in_progress
+2025-08-24 20:49:24,944 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:49:24,946 - INFO - Batch status: in_progress
+2025-08-24 20:50:25,186 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:50:25,188 - INFO - Batch status: in_progress
+2025-08-24 20:51:25,423 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:51:25,425 - INFO - Batch status: in_progress
+2025-08-24 20:52:25,711 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:52:25,713 - INFO - Batch status: in_progress
+2025-08-24 20:53:25,925 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:53:25,927 - INFO - Batch status: in_progress
+2025-08-24 20:54:26,154 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:54:26,156 - INFO - Batch status: in_progress
+2025-08-24 20:55:26,380 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:55:26,382 - INFO - Batch status: in_progress
+2025-08-24 20:56:26,594 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:56:26,596 - INFO - Batch status: in_progress
+2025-08-24 20:57:26,822 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:57:26,824 - INFO - Batch status: in_progress
+2025-08-24 20:58:27,034 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:58:27,035 - INFO - Batch status: in_progress
+2025-08-24 20:59:27,268 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 20:59:27,270 - INFO - Batch status: in_progress
+2025-08-24 21:00:27,493 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:00:27,496 - INFO - Batch status: in_progress
+2025-08-24 21:01:27,703 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:01:27,705 - INFO - Batch status: in_progress
+2025-08-24 21:02:27,928 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:02:27,930 - INFO - Batch status: in_progress
+2025-08-24 21:03:28,331 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:03:28,333 - INFO - Batch status: in_progress
+2025-08-24 21:04:28,555 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:04:28,557 - INFO - Batch status: in_progress
+2025-08-24 21:05:28,720 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:05:28,722 - INFO - Batch status: in_progress
+2025-08-24 21:06:28,937 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:06:28,939 - INFO - Batch status: in_progress
+2025-08-24 21:07:29,150 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:07:29,152 - INFO - Batch status: in_progress
+2025-08-24 21:08:29,324 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:08:29,326 - INFO - Batch status: in_progress
+2025-08-24 21:09:29,541 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:09:29,543 - INFO - Batch status: in_progress
+2025-08-24 21:10:29,766 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:10:29,768 - INFO - Batch status: in_progress
+2025-08-24 21:11:30,007 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:11:30,009 - INFO - Batch status: in_progress
+2025-08-24 21:12:30,232 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:12:30,234 - INFO - Batch status: in_progress
+2025-08-24 21:13:30,475 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:13:30,477 - INFO - Batch status: in_progress
+2025-08-24 21:14:30,723 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:14:30,725 - INFO - Batch status: in_progress
+2025-08-24 21:15:30,968 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:15:30,971 - INFO - Batch status: in_progress
+2025-08-24 21:16:31,203 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:16:31,206 - INFO - Batch status: in_progress
+2025-08-24 21:17:31,408 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:17:31,410 - INFO - Batch status: in_progress
+2025-08-24 21:18:31,622 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:18:31,625 - INFO - Batch status: in_progress
+2025-08-24 21:19:31,785 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:19:31,787 - INFO - Batch status: in_progress
+2025-08-24 21:20:32,012 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:20:32,014 - INFO - Batch status: in_progress
+2025-08-24 21:21:32,219 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:21:32,220 - INFO - Batch status: in_progress
+2025-08-24 21:22:32,442 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:22:32,443 - INFO - Batch status: in_progress
+2025-08-24 21:23:32,661 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:23:32,662 - INFO - Batch status: finalizing
+2025-08-24 21:24:32,894 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:24:32,894 - INFO - Batch status: finalizing
+2025-08-24 21:25:33,098 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:25:33,099 - INFO - Batch status: finalizing
+2025-08-24 21:26:33,253 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:26:33,255 - INFO - Batch status: finalizing
+2025-08-24 21:27:33,428 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:27:33,429 - INFO - Batch status: finalizing
+2025-08-24 21:28:33,658 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:28:33,660 - INFO - Batch status: finalizing
+2025-08-24 21:29:33,883 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:29:33,884 - INFO - Batch status: finalizing
+2025-08-24 21:30:34,096 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:30:34,097 - INFO - Batch status: finalizing
+2025-08-24 21:31:34,421 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:31:34,423 - INFO - Batch status: finalizing
+2025-08-24 21:32:34,648 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:32:34,649 - INFO - Batch status: finalizing
+2025-08-24 21:33:34,891 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:33:34,893 - INFO - Batch status: finalizing
+2025-08-24 21:34:35,097 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:34:35,099 - INFO - Batch status: finalizing
+2025-08-24 21:35:35,334 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:35:35,335 - INFO - Batch status: finalizing
+2025-08-24 21:36:35,586 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:36:35,587 - INFO - Batch status: finalizing
+2025-08-24 21:37:35,780 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:37:35,781 - INFO - Batch status: finalizing
+2025-08-24 21:38:36,055 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:38:36,056 - INFO - Batch status: finalizing
+2025-08-24 21:39:36,260 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:39:36,262 - INFO - Batch status: finalizing
+2025-08-24 21:40:36,465 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:40:36,465 - INFO - Batch status: finalizing
+2025-08-24 21:41:36,693 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:41:36,693 - INFO - Batch status: finalizing
+2025-08-24 21:42:36,904 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:42:36,906 - INFO - Batch status: finalizing
+2025-08-24 21:43:37,127 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:43:37,129 - INFO - Batch status: finalizing
+2025-08-24 21:44:37,346 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:44:37,348 - INFO - Batch status: finalizing
+2025-08-24 21:45:37,554 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:45:37,555 - INFO - Batch status: finalizing
+2025-08-24 21:46:37,784 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:46:37,786 - INFO - Batch status: finalizing
+2025-08-24 21:47:37,995 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:47:37,997 - INFO - Batch status: finalizing
+2025-08-24 21:48:38,208 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:48:38,210 - INFO - Batch status: finalizing
+2025-08-24 21:49:38,433 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:49:38,434 - INFO - Batch status: finalizing
+2025-08-24 21:50:38,658 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:50:38,660 - INFO - Batch status: finalizing
+2025-08-24 21:51:38,877 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:51:38,879 - INFO - Batch status: finalizing
+2025-08-24 21:52:39,085 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:52:39,085 - INFO - Batch status: finalizing
+2025-08-24 21:53:39,286 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:53:39,287 - INFO - Batch status: finalizing
+2025-08-24 21:54:39,498 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:54:39,499 - INFO - Batch status: finalizing
+2025-08-24 21:55:39,713 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:55:39,714 - INFO - Batch status: finalizing
+2025-08-24 21:56:39,934 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:56:39,936 - INFO - Batch status: finalizing
+2025-08-24 21:57:40,099 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:57:40,101 - INFO - Batch status: finalizing
+2025-08-24 21:58:40,256 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:58:40,258 - INFO - Batch status: finalizing
+2025-08-24 21:59:40,476 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 21:59:40,477 - INFO - Batch status: finalizing
+2025-08-24 22:00:40,762 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:00:40,764 - INFO - Batch status: finalizing
+2025-08-24 22:01:40,927 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:01:40,928 - INFO - Batch status: finalizing
+2025-08-24 22:02:41,092 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:02:41,093 - INFO - Batch status: finalizing
+2025-08-24 22:03:41,242 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:03:41,243 - INFO - Batch status: finalizing
+2025-08-24 22:04:41,426 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:04:41,427 - INFO - Batch status: finalizing
+2025-08-24 22:05:41,611 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:05:41,613 - INFO - Batch status: finalizing
+2025-08-24 22:06:41,831 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:06:41,832 - INFO - Batch status: finalizing
+2025-08-24 22:07:42,027 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:07:42,029 - INFO - Batch status: finalizing
+2025-08-24 22:08:42,284 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:08:42,285 - INFO - Batch status: finalizing
+2025-08-24 22:09:42,483 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:09:42,484 - INFO - Batch status: finalizing
+2025-08-24 22:10:42,726 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:10:42,727 - INFO - Batch status: finalizing
+2025-08-24 22:11:42,929 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:11:42,930 - INFO - Batch status: finalizing
+2025-08-24 22:12:43,144 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:12:43,145 - INFO - Batch status: finalizing
+2025-08-24 22:13:43,344 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:13:43,345 - INFO - Batch status: finalizing
+2025-08-24 22:14:43,557 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:14:43,558 - INFO - Batch status: finalizing
+2025-08-24 22:15:43,799 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:15:43,801 - INFO - Batch status: finalizing
+2025-08-24 22:16:44,018 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:16:44,020 - INFO - Batch status: finalizing
+2025-08-24 22:17:44,246 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:17:44,250 - INFO - Batch status: completed
+2025-08-24 22:17:44,376 - INFO - HTTP Request: GET https://api.openai.com/v1/batches/batch_68abb960db3c8190abeddbd93491188c "HTTP/1.1 200 OK"
+2025-08-24 22:17:46,005 - INFO - HTTP Request: GET https://api.openai.com/v1/files/file-VnjPrj9upbsjfHDqav5Bwp/content "HTTP/1.1 200 OK"

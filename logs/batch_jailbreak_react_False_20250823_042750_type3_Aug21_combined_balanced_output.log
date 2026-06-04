@@ -1,0 +1,75 @@
+Creating batch tasks:   0%|          | 0/2166 [00:00<?, ?it/s]Creating batch tasks:   9%|▉         | 201/2166 [00:00<00:00, 2005.97it/s]Creating batch tasks:  19%|█▊        | 406/2166 [00:00<00:00, 2027.19it/s]Creating batch tasks:  28%|██▊       | 614/2166 [00:00<00:00, 2048.36it/s]Creating batch tasks:  38%|███▊      | 819/2166 [00:00<00:00, 2045.08it/s]Creating batch tasks:  47%|████▋     | 1026/2166 [00:00<00:00, 2050.70it/s]Creating batch tasks:  57%|█████▋    | 1232/2166 [00:00<00:00, 2044.54it/s]Creating batch tasks:  66%|██████▋   | 1437/2166 [00:00<00:00, 2042.05it/s]Creating batch tasks:  76%|███████▌  | 1647/2166 [00:00<00:00, 2057.61it/s]Creating batch tasks:  86%|████████▌ | 1854/2166 [00:00<00:00, 2059.72it/s]Creating batch tasks:  95%|█████████▌| 2060/2166 [00:01<00:00, 2052.83it/s]Creating batch tasks: 100%|██████████| 2166/2166 [00:01<00:00, 2048.20it/s]
+Error parsing JSON at row 25: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 118: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 148: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 185: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 198: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 219: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 246: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 269: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 281: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 398: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 441: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 450: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 482: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 513: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 518: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 533: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 543: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 567: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 576: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 604: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 615: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 659: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 755: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 770: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 814: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 835: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 860: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 962: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 966: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 969: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 982: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 983: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1000: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1002: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1120: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1193: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1219: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1275: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1326: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1354: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1357: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1410: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1477: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1505: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1514: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1520: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1560: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1596: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1615: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1634: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1643: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1644: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1681: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1700: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1720: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1731: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1740: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1819: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 1860: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 2028: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 2041: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 2106: Expecting value: line 1 column 1 (char 0)
+Error parsing JSON at row 2146: Expecting value: line 1 column 1 (char 0)
+total errors: 63
+Wrote 42060 tasks to jailbreak_react_False_20250823_042750_type3_Aug21_combined_balanced_output_bullying_tasks.jsonl
+
+Batch job created: batch_68aa11d0628c819087d5db23ff2412a3
+Status: validatingStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: in_progressStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: finalizingStatus: completedStatus: completed         
+
+Results saved to jailbreak_react_False_20250823_042750_type3_Aug21_combined_balanced_output_bullying_results.jsonl
+
+Parsing results: 0it [00:00, ?it/s]Parsing results: 10414it [00:00, 104123.96it/s]Parsing results: 20827it [00:00, 103329.57it/s]Parsing results: 31189it [00:00, 103457.07it/s]Parsing results: 41535it [00:00, 89888.04it/s] Parsing results: 42060it [00:00, 94541.59it/s]
+Merging into DataFrame:   0%|          | 0/2103 [00:00<?, ?it/s]Merging into DataFrame:  42%|████▏     | 882/2103 [00:00<00:00, 8811.40it/s]Merging into DataFrame:  84%|████████▍ | 1774/2103 [00:00<00:00, 8869.96it/s]Merging into DataFrame: 100%|██████████| 2103/2103 [00:00<00:00, 8869.63it/s]
+Enriched CSV written to jailbreak_react_False_20250823_042750_type3_Aug21_combined_balanced_output_output_with_analysis_batch.csv

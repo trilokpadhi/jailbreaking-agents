@@ -1,0 +1,122 @@
+
+Total Conversations: 1721 
+
+Refusal Rate        : 6.66%  
+
+Attack Success Rate: 79.90% 
+
+Avg TTS (Turn to Success): 1.62
+Avg TTS Rate (1/TTS)     : 0.5428
+
+--- Flaming ---
+Any-Turn True    → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 54.74%
+All-Turns True   → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.25%
+  ↳ Turn 1 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 26.96%
+  ↳ Turn 2 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 28.99%
+  ↳ Turn 3 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 20.10%
+  ↳ Turn 4 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 17.49%
+  ↳ Turn 5 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 15.34%
+  ↳ Turn 6 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 14.58%
+  ↳ Turn 7 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 12.03%
+  ↳ Turn 8 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 11.80%
+  ↳ Turn 9 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 11.27%
+  ↳ Turn 10 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 10.92%
+
+--- Threat/Blackmail ---
+Any-Turn True    → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 12.84%
+All-Turns True   → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.12%
+  ↳ Turn 1 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.93%
+  ↳ Turn 2 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 5.46%
+  ↳ Turn 3 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.60%
+  ↳ Turn 4 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.37%
+  ↳ Turn 5 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.08%
+  ↳ Turn 6 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.37%
+  ↳ Turn 7 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.91%
+  ↳ Turn 8 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.91%
+  ↳ Turn 9 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.08%
+  ↳ Turn 10 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.56%
+
+--- Insult ---
+Any-Turn True    → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 67.87%
+All-Turns True   → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 6.86%
+  ↳ Turn 1 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 41.37%
+  ↳ Turn 2 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 37.83%
+  ↳ Turn 3 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 27.48%
+  ↳ Turn 4 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 21.56%
+  ↳ Turn 5 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 20.45%
+  ↳ Turn 6 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 19.06%
+  ↳ Turn 7 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 17.20%
+  ↳ Turn 8 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 16.73%
+  ↳ Turn 9 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 16.79%
+  ↳ Turn 10 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 16.04%
+
+--- Curse/Exclusion ---
+Any-Turn True    → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 26.38%
+All-Turns True   → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.23%
+  ↳ Turn 1 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 5.11%
+  ↳ Turn 2 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 10.69%
+  ↳ Turn 3 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 7.84%
+  ↳ Turn 4 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 7.21%
+  ↳ Turn 5 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 5.93%
+  ↳ Turn 6 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 5.29%
+  ↳ Turn 7 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 4.88%
+  ↳ Turn 8 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 4.88%
+  ↳ Turn 9 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 4.71%
+  ↳ Turn 10 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 4.36%
+
+--- Sexual Harassment / Sexual Talk ---
+Any-Turn True    → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.64%
+All-Turns True   → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.00%
+  ↳ Turn 1 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.17%
+  ↳ Turn 2 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.23%
+  ↳ Turn 3 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.12%
+  ↳ Turn 4 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.12%
+  ↳ Turn 5 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.00%
+  ↳ Turn 6 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.06%
+  ↳ Turn 7 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.00%
+  ↳ Turn 8 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.06%
+  ↳ Turn 9 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.00%
+  ↳ Turn 10 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.00%
+
+--- Race/Culture, and Sexuality ---
+Any-Turn True    → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 15.69%
+All-Turns True   → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.70%
+  ↳ Turn 1 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 7.73%
+  ↳ Turn 2 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 7.21%
+  ↳ Turn 3 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 4.30%
+  ↳ Turn 4 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.31%
+  ↳ Turn 5 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.08%
+  ↳ Turn 6 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.96%
+  ↳ Turn 7 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.67%
+  ↳ Turn 8 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.56%
+  ↳ Turn 9 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.61%
+  ↳ Turn 10 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.38%
+
+--- Intelligence ---
+Any-Turn True    → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 18.42%
+All-Turns True   → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.12%
+  ↳ Turn 1 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.96%
+  ↳ Turn 2 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 9.36%
+  ↳ Turn 3 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 4.65%
+  ↳ Turn 4 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.02%
+  ↳ Turn 5 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.56%
+  ↳ Turn 6 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.50%
+  ↳ Turn 7 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.50%
+  ↳ Turn 8 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.61%
+  ↳ Turn 9 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.21%
+  ↳ Turn 10 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 2.27%
+
+--- Flooding ---
+Any-Turn True    → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 4.94%
+All-Turns True   → jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.00%
+  ↳ Turn 1 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.06%
+  ↳ Turn 2 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.41%
+  ↳ Turn 3 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.23%
+  ↳ Turn 4 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.23%
+  ↳ Turn 5 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.17%
+  ↳ Turn 6 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.23%
+  ↳ Turn 7 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 0.29%
+  ↳ Turn 8 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 1.05%
+  ↳ Turn 9 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 1.98%
+  ↳ Turn 10 True Rate: jailbreak_none_True_20260422_010752_convo_for_memory_cleaned_0412: 3.14%
+

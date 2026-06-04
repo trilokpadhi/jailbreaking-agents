@@ -1,0 +1,122 @@
+
+Total Conversations: 1122 
+
+Refusal Rate        : 7.99%  
+
+Attack Success Rate: 88.68% 
+
+Avg TTS (Turn to Success): 1.53
+Avg TTS Rate (1/TTS)     : 0.6995
+
+--- Flaming ---
+Any-Turn True    → ft_qwen3_30b_cot_convos: 75.40%
+All-Turns True   → ft_qwen3_30b_cot_convos: 9.00%
+  ↳ Turn 1 True Rate: ft_qwen3_30b_cot_convos: 28.43%
+  ↳ Turn 2 True Rate: ft_qwen3_30b_cot_convos: 54.81%
+  ↳ Turn 3 True Rate: ft_qwen3_30b_cot_convos: 55.26%
+  ↳ Turn 4 True Rate: ft_qwen3_30b_cot_convos: 54.90%
+  ↳ Turn 5 True Rate: ft_qwen3_30b_cot_convos: 51.52%
+  ↳ Turn 6 True Rate: ft_qwen3_30b_cot_convos: 48.93%
+  ↳ Turn 7 True Rate: ft_qwen3_30b_cot_convos: 44.65%
+  ↳ Turn 8 True Rate: ft_qwen3_30b_cot_convos: 42.60%
+  ↳ Turn 9 True Rate: ft_qwen3_30b_cot_convos: 40.20%
+  ↳ Turn 10 True Rate: ft_qwen3_30b_cot_convos: 37.97%
+
+--- Threat/Blackmail ---
+Any-Turn True    → ft_qwen3_30b_cot_convos: 31.19%
+All-Turns True   → ft_qwen3_30b_cot_convos: 0.09%
+  ↳ Turn 1 True Rate: ft_qwen3_30b_cot_convos: 0.98%
+  ↳ Turn 2 True Rate: ft_qwen3_30b_cot_convos: 13.28%
+  ↳ Turn 3 True Rate: ft_qwen3_30b_cot_convos: 17.11%
+  ↳ Turn 4 True Rate: ft_qwen3_30b_cot_convos: 17.20%
+  ↳ Turn 5 True Rate: ft_qwen3_30b_cot_convos: 16.22%
+  ↳ Turn 6 True Rate: ft_qwen3_30b_cot_convos: 14.88%
+  ↳ Turn 7 True Rate: ft_qwen3_30b_cot_convos: 14.62%
+  ↳ Turn 8 True Rate: ft_qwen3_30b_cot_convos: 13.81%
+  ↳ Turn 9 True Rate: ft_qwen3_30b_cot_convos: 12.57%
+  ↳ Turn 10 True Rate: ft_qwen3_30b_cot_convos: 11.05%
+
+--- Insult ---
+Any-Turn True    → ft_qwen3_30b_cot_convos: 81.82%
+All-Turns True   → ft_qwen3_30b_cot_convos: 17.91%
+  ↳ Turn 1 True Rate: ft_qwen3_30b_cot_convos: 44.92%
+  ↳ Turn 2 True Rate: ft_qwen3_30b_cot_convos: 60.07%
+  ↳ Turn 3 True Rate: ft_qwen3_30b_cot_convos: 57.22%
+  ↳ Turn 4 True Rate: ft_qwen3_30b_cot_convos: 58.38%
+  ↳ Turn 5 True Rate: ft_qwen3_30b_cot_convos: 53.92%
+  ↳ Turn 6 True Rate: ft_qwen3_30b_cot_convos: 51.60%
+  ↳ Turn 7 True Rate: ft_qwen3_30b_cot_convos: 47.68%
+  ↳ Turn 8 True Rate: ft_qwen3_30b_cot_convos: 45.37%
+  ↳ Turn 9 True Rate: ft_qwen3_30b_cot_convos: 43.23%
+  ↳ Turn 10 True Rate: ft_qwen3_30b_cot_convos: 41.18%
+
+--- Curse/Exclusion ---
+Any-Turn True    → ft_qwen3_30b_cot_convos: 45.63%
+All-Turns True   → ft_qwen3_30b_cot_convos: 0.18%
+  ↳ Turn 1 True Rate: ft_qwen3_30b_cot_convos: 2.05%
+  ↳ Turn 2 True Rate: ft_qwen3_30b_cot_convos: 10.52%
+  ↳ Turn 3 True Rate: ft_qwen3_30b_cot_convos: 13.01%
+  ↳ Turn 4 True Rate: ft_qwen3_30b_cot_convos: 15.69%
+  ↳ Turn 5 True Rate: ft_qwen3_30b_cot_convos: 18.72%
+  ↳ Turn 6 True Rate: ft_qwen3_30b_cot_convos: 21.66%
+  ↳ Turn 7 True Rate: ft_qwen3_30b_cot_convos: 21.84%
+  ↳ Turn 8 True Rate: ft_qwen3_30b_cot_convos: 21.75%
+  ↳ Turn 9 True Rate: ft_qwen3_30b_cot_convos: 20.86%
+  ↳ Turn 10 True Rate: ft_qwen3_30b_cot_convos: 21.66%
+
+--- Sexual Harassment / Sexual Talk ---
+Any-Turn True    → ft_qwen3_30b_cot_convos: 1.96%
+All-Turns True   → ft_qwen3_30b_cot_convos: 0.00%
+  ↳ Turn 1 True Rate: ft_qwen3_30b_cot_convos: 0.18%
+  ↳ Turn 2 True Rate: ft_qwen3_30b_cot_convos: 0.45%
+  ↳ Turn 3 True Rate: ft_qwen3_30b_cot_convos: 0.45%
+  ↳ Turn 4 True Rate: ft_qwen3_30b_cot_convos: 0.53%
+  ↳ Turn 5 True Rate: ft_qwen3_30b_cot_convos: 0.71%
+  ↳ Turn 6 True Rate: ft_qwen3_30b_cot_convos: 0.53%
+  ↳ Turn 7 True Rate: ft_qwen3_30b_cot_convos: 0.53%
+  ↳ Turn 8 True Rate: ft_qwen3_30b_cot_convos: 0.27%
+  ↳ Turn 9 True Rate: ft_qwen3_30b_cot_convos: 0.27%
+  ↳ Turn 10 True Rate: ft_qwen3_30b_cot_convos: 0.45%
+
+--- Race/Culture, and Sexuality ---
+Any-Turn True    → ft_qwen3_30b_cot_convos: 5.79%
+All-Turns True   → ft_qwen3_30b_cot_convos: 0.27%
+  ↳ Turn 1 True Rate: ft_qwen3_30b_cot_convos: 2.50%
+  ↳ Turn 2 True Rate: ft_qwen3_30b_cot_convos: 2.14%
+  ↳ Turn 3 True Rate: ft_qwen3_30b_cot_convos: 1.96%
+  ↳ Turn 4 True Rate: ft_qwen3_30b_cot_convos: 1.87%
+  ↳ Turn 5 True Rate: ft_qwen3_30b_cot_convos: 1.52%
+  ↳ Turn 6 True Rate: ft_qwen3_30b_cot_convos: 1.52%
+  ↳ Turn 7 True Rate: ft_qwen3_30b_cot_convos: 1.34%
+  ↳ Turn 8 True Rate: ft_qwen3_30b_cot_convos: 1.34%
+  ↳ Turn 9 True Rate: ft_qwen3_30b_cot_convos: 1.16%
+  ↳ Turn 10 True Rate: ft_qwen3_30b_cot_convos: 1.16%
+
+--- Intelligence ---
+Any-Turn True    → ft_qwen3_30b_cot_convos: 55.79%
+All-Turns True   → ft_qwen3_30b_cot_convos: 0.09%
+  ↳ Turn 1 True Rate: ft_qwen3_30b_cot_convos: 2.67%
+  ↳ Turn 2 True Rate: ft_qwen3_30b_cot_convos: 29.59%
+  ↳ Turn 3 True Rate: ft_qwen3_30b_cot_convos: 31.91%
+  ↳ Turn 4 True Rate: ft_qwen3_30b_cot_convos: 32.71%
+  ↳ Turn 5 True Rate: ft_qwen3_30b_cot_convos: 30.48%
+  ↳ Turn 6 True Rate: ft_qwen3_30b_cot_convos: 27.72%
+  ↳ Turn 7 True Rate: ft_qwen3_30b_cot_convos: 25.94%
+  ↳ Turn 8 True Rate: ft_qwen3_30b_cot_convos: 23.89%
+  ↳ Turn 9 True Rate: ft_qwen3_30b_cot_convos: 22.91%
+  ↳ Turn 10 True Rate: ft_qwen3_30b_cot_convos: 20.86%
+
+--- Flooding ---
+Any-Turn True    → ft_qwen3_30b_cot_convos: 3.21%
+All-Turns True   → ft_qwen3_30b_cot_convos: 0.09%
+  ↳ Turn 1 True Rate: ft_qwen3_30b_cot_convos: 0.18%
+  ↳ Turn 2 True Rate: ft_qwen3_30b_cot_convos: 0.18%
+  ↳ Turn 3 True Rate: ft_qwen3_30b_cot_convos: 0.45%
+  ↳ Turn 4 True Rate: ft_qwen3_30b_cot_convos: 0.36%
+  ↳ Turn 5 True Rate: ft_qwen3_30b_cot_convos: 0.89%
+  ↳ Turn 6 True Rate: ft_qwen3_30b_cot_convos: 0.71%
+  ↳ Turn 7 True Rate: ft_qwen3_30b_cot_convos: 1.07%
+  ↳ Turn 8 True Rate: ft_qwen3_30b_cot_convos: 0.71%
+  ↳ Turn 9 True Rate: ft_qwen3_30b_cot_convos: 1.52%
+  ↳ Turn 10 True Rate: ft_qwen3_30b_cot_convos: 0.89%
+

@@ -18,7 +18,7 @@ OLLAMA_ENDPOINTS = [
     "http://127.0.0.1:11437/v1"   # GPU 3
 ]
 
-def process_single_row_with_endpoint(row, endpoint_index, row_idx, total_rows, args):
+def process_single_row_with_endpoint(row, endpoint_index, row_idx, total_rows, args, pbar=None):
     """
     Process a single row using a specific endpoint with detailed logging
     """
@@ -30,10 +30,11 @@ def process_single_row_with_endpoint(row, endpoint_index, row_idx, total_rows, a
         llm_config = {
             "config_list": [
                 {
-                    "model": "llama3.1",
+                    "model": args.model_name,
                     "base_url": endpoint,
                     "api_key": "ollama",
                     "max_tokens": 512,
+                    "parallel_tool_calls": False,
                 }
             ],
             "temperature": 0.7
@@ -60,7 +61,26 @@ def process_single_row_with_endpoint(row, endpoint_index, row_idx, total_rows, a
         harasser_name = harasser_name.split()[0]  # Use only the first name
         victim_name = victim_name.split()[0]  # Use only the first name
         # --------------------------------------------------------------------------------
-        if args.planning_method.lower() == 'none':
+        if args.with_memory:
+            h_agent = AssistantAgent(
+                name=harasser_name,
+                system_message=(
+                    f"You are an assistant. Your name is {harasser_name} "
+                    f"and your role is {harasser_role}. Here is your past conversation {conversation}"
+                ),
+                llm_config=llm_config,
+            )
+
+            v_agent = AssistantAgent(
+                name=victim_name,
+                system_message=(
+                    f"You are an assistant. Your name is {victim_name} "
+                    f"and your role is victim. Here is your past conversation {conversation}"
+                ),
+                llm_config=llm_config,
+            )
+
+        elif args.planning_method.lower() == 'none':
             # Create agents with the specific endpoint
             h_agent = AssistantAgent(
                 name=harasser_name,
@@ -131,31 +151,6 @@ def process_single_row_with_endpoint(row, endpoint_index, row_idx, total_rows, a
                 ),
                 llm_config=llm_config,
             )
-        elif args.with_memory:
-            h_agent = AssistantAgent(
-                name=harasser_name,
-                system_message=(
-                    f"You are an assistant. Your name is {harasser_name} "
-                    f"and your role is {harasser_role}. Here is your past conversation {conversation}"
-                ),
-                llm_config=llm_config,
-            )
-
-            v_agent = AssistantAgent(
-                name=victim_name,
-                system_message=(
-                    f"You are an assistant. Your name is {victim_name} "
-                    f"and your role is victim. Here is your past conversation {conversation}"
-                ),
-                llm_config=llm_config,
-            )
-
-            # llm_config={"config_list": config_list},
-            llm_config=llm_config,
-    
-
-
-            
         # Run conversation
         h_agent.initiate_chat(
             v_agent,
@@ -180,28 +175,31 @@ def process_single_row_with_endpoint(row, endpoint_index, row_idx, total_rows, a
         
         elapsed_time = time.time() - start_time
         progress_pct = (row_idx + 1) / total_rows * 100
-        
-        # Print progress with timestamp and GPU info
+
         current_time = datetime.now().strftime("%H:%M:%S")
-        print(f"[{current_time}] Row {row_idx+1}/{total_rows} ({progress_pct:.1f}%) - GPU {endpoint_index} - {elapsed_time:.2f}s - {harasser_name} vs {victim_name}")
-        
+        tqdm.write(f"[{current_time}] Row {row_idx+1}/{total_rows} ({progress_pct:.1f}%) - GPU {endpoint_index} - {elapsed_time:.2f}s - {harasser_name} vs {victim_name}")
+        if pbar is not None:
+            pbar.update(1)
+
         return json.dumps(serialized_messages, indent=4)
-        
+
     except Exception as e:
         elapsed_time = time.time() - start_time
         current_time = datetime.now().strftime("%H:%M:%S")
-        print(f"[{current_time}] ERROR Row {row_idx+1}/{total_rows} - GPU {endpoint_index} - {elapsed_time:.2f}s - {str(e)}")
+        tqdm.write(f"[{current_time}] ERROR Row {row_idx+1}/{total_rows} - GPU {endpoint_index} - {elapsed_time:.2f}s - {str(e)}")
+        if pbar is not None:
+            pbar.update(1)
         return f'ERROR: {e}'
 
-def process_batch(batch_data, args):
+def process_batch(batch_data, args, pbar=None):
     """Process a batch of rows with enhanced logging"""
     batch_rows, total_rows = batch_data
     results = []
-    
+
     for row, gpu_id, row_idx in batch_rows:
-        result = process_single_row_with_endpoint(row, gpu_id, row_idx, total_rows, args)
+        result = process_single_row_with_endpoint(row, gpu_id, row_idx, total_rows, args, pbar)
         results.append(result)
-    
+
     return results
 
 def main():
@@ -211,10 +209,20 @@ def main():
     parser.add_argument("--n_workers_per_gpu", type=int, default=2, help="Number of workers per GPU")
     parser.add_argument("--planning_method", choices=['cot', 'react', 'none'], default='none', help="Planning method to use")
     parser.add_argument("--with_memory", action='store_true', help="Enable memory for agents")
+    parser.add_argument("--model_name", type=str, default="llama3.1", help="Model name to use (e.g. llama3.1, deepseek-ai/deepseek-moe-16b-chat)")
+    parser.add_argument("--endpoints", type=str, default=None, help="Comma-separated list of API base URLs. Defaults to 4 local Ollama ports.")
     args = parser.parse_args()
     
     start_total_time = time.time()
     start_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    # Override endpoints if provided
+    if args.endpoints:
+        global OLLAMA_ENDPOINTS
+        OLLAMA_ENDPOINTS = [e.strip() for e in args.endpoints.split(",")]
+
+    print(f"Using model: {args.model_name}")
+    print(f"Using endpoints: {OLLAMA_ENDPOINTS}")
     
     df = pd.read_csv(args.input_csv) # lets use only first 100 rows for testing
     # df = df.head(20)  # For testing, limit to first 100 rows
@@ -243,16 +251,11 @@ def main():
     
     # Process batches in parallel
     results = []
-    with ThreadPoolExecutor(max_workers=n_workers_total) as executor:
+    with tqdm(total=len(df), desc="Generating conversations", unit="row") as pbar:
+        with ThreadPoolExecutor(max_workers=n_workers_total) as executor:
+            process_batch_partial = partial(process_batch, args=args, pbar=pbar)
+            batch_results = list(executor.map(process_batch_partial, batches))
 
-        process_batch_partial = partial(process_batch, args=args)
-        batch_results = list(tqdm(
-            executor.map(process_batch_partial, batches),
-            total=len(batches),
-            desc=f"Processing batches across {len(OLLAMA_ENDPOINTS)} GPUs",
-            unit="batch"
-        ))
-        
         # Flatten results while maintaining order
         for batch_result in batch_results:
             results.extend(batch_result)

@@ -1,0 +1,76 @@
+name: agents_sl_py310_test
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+# channel_priority: strict
+
+dependencies:
+  # Core
+  - python=3.10
+  - pip
+  - numpy=1.26
+
+  # PyTorch + CUDA 12.1 stack (do NOT load cluster CUDA module)
+  - pytorch=2.4
+  - torchvision=0.19
+  - torchaudio=2.4
+  - pytorch-cuda=12.1
+
+  # Scientific stack (conda-forge builds are stable)
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pillow
+  - requests
+  - pyyaml
+
+  # Use full pyarrow via pip (not conda pyarrow-core)
+  # (intentionally no 'pyarrow' here)
+
+  - pip:
+      # HF & training
+      - transformers==4.38.0
+      - tokenizers==0.15.2
+      - huggingface-hub==0.33.0
+      - datasets==3.6.0
+      - accelerate==0.28.0
+      - peft==0.10.0
+      - trl==0.7.7
+      - torchmetrics
+      - einops==0.8.1
+      - sentencepiece==0.2.0
+      - tiktoken==0.9.0
+      - tqdm
+      - regex
+
+      # CUDA add-ons
+      - bitsandbytes==0.46.1
+      - flash-attn==2.8.0.post2
+
+      # CV & NLP extras
+      - opencv-python-headless==4.11.0.86
+      - spacy==3.6.1
+      - "en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0-py3-none-any.whl"
+      - "en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.6.0/en_core_web_lg-3.6.0-py3-none-any.whl"
+      - nltk==3.9.1
+
+      # Web stacks (pin starlette/pydantic)
+      - fastapi==0.115.3
+      - starlette==0.40.0
+      - pydantic==2.9.2
+      - uvicorn==0.30.6
+      - flask==2.1.2
+
+      # Arrow via pip to align with datasets 3.x
+      - pyarrow==17.0.0
+
+      # Simulators (keep, but these may be brittle)
+      - ai2thor==2.1.0
+      - alfworld==0.4.2
+
+      # Misc
+      - openai==0.28.1
+      - wandb
