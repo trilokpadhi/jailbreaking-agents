@@ -1,6 +1,6 @@
 # Jailbreaking Agents
 
-Research codebase for studying cyberbullying jailbreak attacks on LLM-based agents. We evaluate how fine-tuned and base LLMs (Qwen3, LLaMA, DeepSeek) respond under various agent prompting strategies: **none**, **CoT**, **ReACT**, and **memory injection**.
+Research codebase for studying cyberbullying jailbreak attacks on LLM-based agents. We evaluate how fine-tuned and base LLMs (Qwen3, LLaMA, DeepSeek) respond under various agent prompting strategies: [...]
 
 ## Repository Structure
 
@@ -89,4 +89,13 @@ pip install huggingface_hub
 huggingface-cli upload <your-org>/<dataset-name> generations_qwen/ --repo-type dataset
 ```
 
+This paper has been accepted to AAAI ICWSM 2027. If you use this benchmark, please cite it as:
 
+```bibtex
+@article{padhi2025echoes,
+  title={Echoes of human malice in agents: Benchmarking LLMs for multi-turn online harassment attacks},
+  author={Padhi, Trilok and Lu, Pinxian and Erol, Abdulkadir and Sutar, Tanmay and Sharma, Gauri and Sonmez, Mina and De Choudhury, Munmun and Kursuncu, Ugur},
+  journal={arXiv preprint arXiv:2510.14207},
+  year={2025}
+}
+```
